@@ -15,5 +15,10 @@
       <textarea class="feedback" name="feedback" cols="30" rows="5" placeholder="気軽に投稿してください！" [(ngModel)]="feedback.content"></textarea>
     </p>
   </label>
-  <button class="submit" (click)="submitFeedback()">送信</button>
+  <div *ngIf="!isFormSended">
+    <button class="submit" (click)="submitFeedback()">送信</button>
+  </div>
+  <div *ngIf="isFormSended">
+    <p>フィードバックありがとうございました！</p>
+  </div>
 </div>
