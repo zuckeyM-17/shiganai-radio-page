@@ -1,0 +1,5 @@
+  <ul>
+    <li *ngFor="let episode of episodes">
+      <span (click)="gotoDetail(episode)">{{ episode.title }}</span>
+    </li>
+  </ul>
