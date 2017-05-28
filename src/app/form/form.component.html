@@ -1,0 +1,24 @@
+<div class="form">
+  <label class="label">
+    <p>
+      Twitterアカウント名:
+    </p>
+    <p>
+      @<input class="tw_account" type="text" size="30" placeholder="よければ入力してください！" [(ngModel)]="feedback.tw_account">
+    </p>
+  </label>
+  <label class="label">
+    <p>
+      質問・感想など:
+    </p>
+    <p>
+      <textarea class="feedback" name="feedback" cols="30" rows="5" placeholder="気軽に投稿してください！" [(ngModel)]="feedback.content"></textarea>
+    </p>
+  </label>
+  <div *ngIf="!isFormSended">
+    <button class="submit" (click)="submitFeedback()">送信</button>
+  </div>
+  <div *ngIf="isFormSended">
+    <p>フィードバックありがとうございました！</p>
+  </div>
+</div>
