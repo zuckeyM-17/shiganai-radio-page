@@ -1,24 +1,41 @@
 .footer {
   width: 100% - 100px;
-  height: 200px;
-  padding: 10px 50px 10px 50px;
+  height: 150px;
+  padding: 30px 50px 30px 50px;
   display: flex;
-  overflow-x: hidden;
+  background-color: #222222;
 }
 .each {
   flex: 1;
   margin: 0 50px 0 50px;
+  color: #dddddd;
 }
 .title {
   font-size: 16px;
 }
 .description {
-  margin: 5px 0 0 0;
+  margin: 0;
   font-size: 12px;
 }
 .description_list {
+  padding: 0 0 0 20px;
   margin: 5px 0 5px 0;
 }
 .description_item {
   font-size: 12px;
+}
+.link {
+  text-decoration: none;
+  color: #dddddd;
+}
+.link:hover {
+  color: #999999;
+}
+.follow {
+  margin: 10px 0 10px 0;
+}
+.twitter-follow-button {
+  color: #dddddd;
+  font-size: 12px;
+  text-decoration: none;
 }
