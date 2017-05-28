@@ -28,7 +28,7 @@ export class FormComponent implements OnInit {
     this.feedback.id = Number(new Date());
     this.feedback.date = new Date();
     const that = this;
-    this.sendFeedback().then(function(status){
+    this.sendFeedback().then(status => {
       if(status === 200) {
         that.clearFeedback();
         that.isFormSended = true;
@@ -46,10 +46,7 @@ export class FormComponent implements OnInit {
         ]
       })
     )
-    .then(function(res) {
-      console.log(JSON.stringify(res));
-      return res.status;
-    })
+    .then(res => res.status)
     .catch(err => alert(err));
   }
 
