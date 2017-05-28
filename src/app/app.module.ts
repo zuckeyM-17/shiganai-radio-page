@@ -11,7 +11,6 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { EpisodeService } from './episode.service';
 import { EpisodeListComponent } from './episode-list/episode-list.component';
-import { EpisodeSummaryComponent } from './episode-summary/episode-summary.component';
 import { EpisodeDetailComponent } from './episode-detail/episode-detail.component';
 import { FormComponent } from './form/form.component';
 
@@ -23,7 +22,6 @@ import { FormComponent } from './form/form.component';
     BodyComponent,
     FooterComponent,
     EpisodeListComponent,
-    EpisodeSummaryComponent,
     EpisodeDetailComponent,
     FormComponent,
   ],

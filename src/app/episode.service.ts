@@ -24,6 +24,7 @@ export class EpisodeService {
        '%2Clink' +
        '%2Csummary' +
        '%2Cdescription' +
+       '%2CpubDate' +
        '%20from%20rss%20where' +
        '%20url%3D\'http%3A%2F%2Ffeeds.soundcloud.com%2Fusers%2Fsoundcloud%3Ausers%3A294673416%2Fsounds.rss' +
        '\'&format=json&diagnostics=true&callback=')
@@ -31,6 +32,7 @@ export class EpisodeService {
          const linkSplitedBySlash = v.link.split('/');
          return {
            id: linkSplitedBySlash[linkSplitedBySlash.length - 1],
+           pubDate: new Date(v.pubDate),
            link: this.sanitizer.bypassSecurityTrustResourceUrl(v.link),
            title: v.title,
            summary: v.summary,
