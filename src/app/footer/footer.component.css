@@ -1,0 +1,24 @@
+.footer {
+  width: 100% - 100px;
+  height: 200px;
+  padding: 10px 50px 10px 50px;
+  display: flex;
+  overflow-x: hidden;
+}
+.each {
+  flex: 1;
+  margin: 0 50px 0 50px;
+}
+.title {
+  font-size: 16px;
+}
+.description {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+}
+.description_list {
+  margin: 5px 0 5px 0;
+}
+.description_item {
+  font-size: 12px;
+}
