@@ -1,5 +1,10 @@
   <ul>
-    <li *ngFor="let episode of episodes">
-      <span (click)="gotoDetail(episode)">{{ episode.title }}</span>
+    <li *ngFor="let episode of episodes; let i = index;">
+      <a [href]="episode.link" class="sc_link"><i class="fa fa-play-circle" aria-hidden="true"></i></a>
+      <div (click)="gotoDetail(episode)" class="episode_summary">
+        <span class="epsode_pub_date">{{ episode.pubDate.toDateString() }}</span>
+        <p class="epsode_title">{{ episode.title }}</p>
+        <div class="episode_summary_content">{{ episode.summary }}</div>
+      </div>
     </li>
   </ul>

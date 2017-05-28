@@ -1,0 +1,57 @@
+.epsode_title {
+    font-size: 1.4em;
+    padding: 0.3em 1em 0.3em 1em;
+    margin: 0.3em 1em 0.3em 1em;
+}
+
+.sc_link {
+    flex: 1;
+    font-size: 5em;
+    margin-left: auto;
+    color: #283044;
+}
+
+.sc_link:hover {
+    color: #F15025;
+}
+
+.episode_summary_content {
+    margin: 0.5em 1.4em 0.5em 1.4em;
+    padding: 0.5em 1.4em 0.5em 1.4em;
+    font-size: 0.8em;
+    width: 50em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.episode_summary {
+    flex: 11;
+    margin: 2% 0 2% 0;
+    background-color: #FAF3DD;
+    color: #283044;
+    border-radius: 0.25em;
+    padding: 0.25em;
+}
+
+.episode_summary:hover {
+    background-color: #CAC1A3;
+}
+
+li {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin: 1.5% 2.5% 1.5% 3.5%;
+    padding: 2.5% 2.5% 2.5% 3.5%;
+}
+
+.epsode_pub_date {
+    font-size: 0.5em;
+    background-color: #283044;
+    color: #FAF3DD;
+    padding: 0.5em;
+}

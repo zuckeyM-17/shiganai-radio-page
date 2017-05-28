@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { EpisodeService } from '../episode.service';
@@ -7,7 +7,8 @@ import { Episode } from '../episode';
 @Component({
   selector: 'app-episode-detail',
   templateUrl: './episode-detail.component.html',
-  styleUrls: ['./episode-detail.component.css']
+  styleUrls: ['./episode-detail.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class EpisodeDetailComponent implements OnInit {
   episode: Episode;

@@ -4,4 +4,5 @@ export interface Episode {
     title: string;
     summary: string;
     description: string;
+    pubDate: Date;
 }
