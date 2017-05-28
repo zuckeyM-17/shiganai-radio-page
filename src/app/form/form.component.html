@@ -4,7 +4,7 @@
       Twitterアカウント名:
     </p>
     <p>
-      <input class="tw_account" type="text" name="tw_account">
+      <input class="tw_account" type="text" [(ngModel)]="feedback.tw_account">
     </p>
   </label>
   <label class="label">
@@ -12,8 +12,8 @@
       質問・感想など:
     </p>
     <p>
-      <textarea class="feedback" name="feedback" cols="30" rows="5"></textarea>
+      <textarea class="feedback" name="feedback" cols="30" rows="5" [(ngModel)]="feedback.content"></textarea>
     </p>
   </label>
-  <input type="submit" value="送信">
+  <button class="submit" (click)="submitFeedback()">送信</button>
 </div>
