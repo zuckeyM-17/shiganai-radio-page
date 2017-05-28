@@ -14,6 +14,7 @@ import { EpisodeListComponent } from './episode-list/episode-list.component';
 import { EpisodeSummaryComponent } from './episode-summary/episode-summary.component';
 import { EpisodeDetailComponent } from './episode-detail/episode-detail.component';
 import { FormComponent } from './form/form.component';
+import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormComponent } from './form/form.component';
     EpisodeSummaryComponent,
     EpisodeDetailComponent,
     FormComponent,
+    TwTimelineComponent,
   ],
   imports: [
     BrowserModule,

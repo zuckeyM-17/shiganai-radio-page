@@ -1,0 +1,11 @@
+.tw-timeline {
+  width: 250px;
+  border: 0.5px solid #eeeeee;
+  margin: 10px auto 10px auto;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 1px 1px #eeeeee;
+}
+.twitter-timeline {
+  color: #ffffff;
+  text-decoration: none;
+}
