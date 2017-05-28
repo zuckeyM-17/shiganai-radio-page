@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EpisodeService } from '../episode.service';
 
 @Component({
   selector: 'app-body',
@@ -7,15 +6,7 @@ import { EpisodeService } from '../episode.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  episodes: any;
+  constructor() {  }
 
-  constructor(private episodeService: EpisodeService) {  }
-
-  ngOnInit() {
-    this.getEpisodes();
-  }
-
-  getEpisodes() {
-    this.episodeService.getEpisodes().then(episodes => this.episodes = episodes);
-  }
+  ngOnInit() {}
 }

@@ -1,0 +1,40 @@
+.footer {
+  width: 100% - 100px;
+  padding: 30px 5% 30px 5%;
+  display: flex;
+  background-color: #222222;
+}
+.each {
+  flex: 1;
+  margin: 0 5% 0 5%;
+  color: #dddddd;
+}
+.title {
+  font-size: 16px;
+}
+.description {
+  margin: 0;
+  font-size: 12px;
+}
+.description_list {
+  padding: 0 0 0 20px;
+  margin: 5px 0 5px 0;
+}
+.description_item {
+  font-size: 12px;
+}
+.link {
+  text-decoration: none;
+  color: #dddddd;
+}
+.link:hover {
+  color: #999999;
+}
+.follow {
+  margin: 10px 0 10px 0;
+}
+.twitter-follow-button {
+  color: #dddddd;
+  font-size: 12px;
+  text-decoration: none;
+}
