@@ -33,26 +33,11 @@ export class FormComponent implements OnInit {
   }
 
   sendFeedback():Promise<number> {
-    const id = this.feedback.id;
-    const tw_account = this.feedback.tw_account;
-    const content = this.feedback.content;
-    const date = this.feedback.date;
     return axios.post(
       'https://hooks.slack.com/services/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'
       ,JSON.stringify({
         attachments:[
-          {"text":
-            "id: " + id + "      " +
-            "send_date: " +
-            date.getFullYear() + "/" +
-            (date.getMonth()+1) + "/" +
-            date.getDate() + " " +
-            date.getHours() + ":" + date.getMinutes() +
-            "\n" +
-            "<https://twitter.com/" + tw_account + "|" + tw_account + ">" +
-            "さんからのメッセージです。\n" +
-            content
-          }
+          {"text": this.makeSlackText()}
         ]
       })
     )
@@ -61,5 +46,23 @@ export class FormComponent implements OnInit {
       return res.status;
     })
     .catch(err => alert(err));
+  }
+  makeSlackText():string {
+    const id = this.feedback.id;
+    const tw_account = this.feedback.tw_account;
+    const content = this.feedback.content;
+    const date = this.feedback.date;
+
+    let result = "";
+    result += "id: " + id + "      ";
+    result += "send_date: ";
+    result += date.getFullYear() + "/";
+    result += (date.getMonth()+1) + "/";
+    result += date.getDate() + " ";
+    result += date.getHours() + ":" + date.getMinutes() + "\n";
+    result += "<https://twitter.com/" + tw_account + "|" + tw_account + ">";
+    result += "さんからのメッセージです。\n";
+    result += content;
+    return result;
   }
 }
