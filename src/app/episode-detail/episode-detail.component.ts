@@ -32,8 +32,8 @@ export class EpisodeDetailComponent implements OnInit {
       .getEpisode(id)
       .then(episode => {
         this.episode = episode;
-        const detailAria = document.getElementById('episode_detail');
-        detailAria.innerHTML = episode.description;
+        const detailArea = document.getElementById('episode_detail');
+        detailArea.innerHTML = episode.description;
       });
   }
 
