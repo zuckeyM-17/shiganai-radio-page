@@ -11,8 +11,8 @@ import { Http, Response } from '@angular/http';
 export class FormComponent implements OnInit {
   feedback: Feedback = {
     id: null,
-    tw_account: "test_account",
-    content: "test_content",
+    tw_account: "",
+    content: "",
     date: null,
   }
   status: number;
