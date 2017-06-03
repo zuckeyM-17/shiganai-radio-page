@@ -1,5 +1,5 @@
 .ep_detail_container {
-    margin: 30px 0 50px 0;
+    margin: 30px 0 0 0;
     padding: 30px 30px 30px 30px;
     background-color: #FAF3DD;
     color: #283044;
@@ -14,7 +14,9 @@
     text-decoration: none;
     padding: 5px 5px 5px 5px;
 }
-
+.ep_detail_link:hover {
+    color: #ff9900;
+}
 #ep_detail_content > p {
     font-size: 1em;
     margin: 5px 5px 5px 5px;

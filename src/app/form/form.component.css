@@ -1,10 +1,15 @@
 .form {
-  margin: 10px 10px 10px 10px;
-  padding: 10px 10px 10px 10px;
+  margin: 10px auto 10px auto;
+  padding: 15px 15px 15px 15px;
   border: 0.5px solid #eeeeee;
   box-shadow: 2px 2px 1px 1px #eeeeee;
   font-size: 12px;
   background-color: #fdfdfd;
+  max-width: 500px;
+}
+.title {
+  font-size: 20px;
+  margin: 10px 0 10px 0;
 }
 .at_mark {
   width: 20px;
@@ -20,4 +25,26 @@
 }
 .feedback_text {
   width: 100%;
+}
+.button_container {
+  text-align:center;
+}
+.submit {
+  width: 100px;
+  padding: 5px 5px 5px 5px;
+  background-color: #ff9900;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 1px 5px 1px #cccccc;
+}
+.submit:hover {
+  background-color: #ffa300;
+}
+.submit:active {
+  background-color: #cc9900;
+  box-shadow: none;
 }
