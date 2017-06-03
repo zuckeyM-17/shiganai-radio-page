@@ -1,11 +1,12 @@
 .list {
-    margin: 10px 30px 10px 30px;
+    margin: 0 30px 0 30px;
 }
 .list_item {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    margin: 20px 0 20px 0;
 }
 .play {
     margin: 0 5px auto 0;
