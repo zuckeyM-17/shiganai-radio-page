@@ -15,11 +15,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  gotoHome() {
-    this.router.navigate(['/']);
-  }
-
-  gotoHost() {
-    this.router.navigate(['/host']);
+  goto(link: string): void {
+    this.router.navigate([link]);
   }
 }
