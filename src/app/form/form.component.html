@@ -1,18 +1,19 @@
 <div class="form">
-  <label class="label">
-    <p>
+  <label class="tw_account">
+    <p class="label">
       Twitterアカウント名:
     </p>
     <p>
-      @<input class="tw_account" type="text" size="30" placeholder="よければ入力してください！" [(ngModel)]="feedback.tw_account">
+      <span class="at_mark">@</span>
+      <input class="tw_account_input" type="text" size="30" placeholder="よければ入力してください！" [(ngModel)]="feedback.tw_account">
     </p>
   </label>
-  <label class="label">
-    <p>
+  <label class="label feedback">
+    <p class="label">
       質問・感想など:
     </p>
     <p>
-      <textarea class="feedback" name="feedback" cols="30" rows="5" placeholder="気軽に投稿してください！" [(ngModel)]="feedback.content"></textarea>
+      <textarea class="feedback_text" name="feedback" cols="30" rows="5" placeholder="気軽に投稿してください！" [(ngModel)]="feedback.content"></textarea>
     </p>
   </label>
   <div *ngIf="!isFormSended">
