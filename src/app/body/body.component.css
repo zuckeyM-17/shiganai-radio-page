@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+}
+.main {
+  flex: 1;
+  width: calc(100% - 300px);
+}
+.sidebar {
+  width: 300px;
+}

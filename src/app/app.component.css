@@ -1,9 +1,0 @@
-.container {
-  display: flex;
-}
-.main {
-  flex: 5;
-}
-.sidebar {
-  width: 300px;
-}
