@@ -11,7 +11,6 @@ const emptyEpisode = {
   pubDate: new Date(),
   description: '',
   summary: '',
-  pubDate: new Date(),
 };
 
 @Injectable()
