@@ -11,20 +11,32 @@ import { Episode } from '../episode';
 })
 export class EpisodeListComponent implements OnInit {
   episodes: Episode[];
+  display_all: boolean;
+
   constructor(
     private episodeService: EpisodeService,
     private router: Router,
-    ) { }
+    ) {
+      this.display_all = false;
+    }
 
   ngOnInit() {
-    this.getEpisodes();
+    this.getEpisodes(10);
   }
 
-  getEpisodes() {
+  getEpisodes(limit = 0) {
     this
       .episodeService
       .getEpisodes()
-      .then(episodes => this.episodes = episodes);
+      .then(episodes => {
+        if (limit === 0) {
+          this.episodes = episodes;
+          this.display_all = true;
+        } else {
+          this.episodes = episodes.slice(0, limit);
+          this.display_all = false;
+        }
+      });
   }
 
   gotoDetail(episode: Episode): void {

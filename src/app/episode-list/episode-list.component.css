@@ -3,6 +3,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin: 20px 0 20px 0;
 }
 .play {
@@ -51,4 +52,12 @@
     background-color: #283044;
     color: #FAF3DD;
     padding: 0.5em;
+}
+
+.toggle_display {
+    color: #283044;
+}
+
+.toggle_display:hover {
+    color: #CAC1A3;
 }

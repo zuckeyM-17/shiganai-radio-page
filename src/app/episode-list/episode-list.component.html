@@ -11,4 +11,8 @@
       <div class="ep_summary_content">{{ episode.summary.substr(0,150)+'...' }}</div>
     </div>
   </li>
+  <li class="list_item">
+    <a *ngIf="!this.display_all" class="toggle_display" (click)="this.getEpisodes()">もっと見る</a>
+    <a *ngIf="this.display_all" class="toggle_display" (click)="this.getEpisodes(10)">閉じる</a>
+  </li>
 </ul>
