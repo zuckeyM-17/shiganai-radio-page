@@ -1,4 +1,7 @@
 <div class="form">
+  <h1 class="title">
+    フィードバックを送る
+  </h1>
   <label class="tw_account">
     <p class="label">
       Twitterアカウント名:
@@ -16,7 +19,7 @@
       <textarea class="feedback_text" name="feedback" cols="30" rows="5" placeholder="気軽に投稿してください！" [(ngModel)]="feedback.content"></textarea>
     </p>
   </label>
-  <div *ngIf="!isFormSended">
+  <div class="button_container" *ngIf="!isFormSended">
     <button class="submit" (click)="submitFeedback()">送信</button>
   </div>
   <div *ngIf="isFormSended">

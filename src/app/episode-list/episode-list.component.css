@@ -22,6 +22,7 @@
     color: #283044;
     border-radius: 0.25em;
     padding: 0.25em;
+    cursor: pointer;
 }
 .ep_summary:hover {
     background-color: #CAC1A3;
@@ -29,7 +30,7 @@
 .ep_summary_title {
     font-size: 1.4em;
     margin: 15px 15px 15px 15px;
-    text-decoration: underline;
+    border-bottom: medium solid #bbbbbb;
 }
 .ep_summary_content {
     margin: 15px 15px 15px 15px;
