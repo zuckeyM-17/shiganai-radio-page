@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import axios from 'axios';
+import SC from 'soundcloud';
 
 import { Episode } from './episode';
 
@@ -8,6 +8,7 @@ const emptyEpisode = {
   id: '',
   title: '',
   link: '',
+  pubDate: new Date(),
   description: '',
   summary: '',
   pubDate: new Date(),
@@ -19,24 +20,19 @@ export class EpisodeService {
   constructor(private sanitizer: DomSanitizer) { }
 
   getEpisodes(): Promise<Episode[]> {
-     return axios.get(
-       'https://query.yahooapis.com/v1/public/yql?q=select' +
-       '%20title' +
-       '%2Clink' +
-       '%2Csummary' +
-       '%2Cdescription' +
-       '%2CpubDate' +
-       '%20from%20rss%20where' +
-       '%20url%3D\'http%3A%2F%2Ffeeds.soundcloud.com%2Fusers%2Fsoundcloud%3Ausers%3A294673416%2Fsounds.rss' +
-       '\'&format=json&diagnostics=true&callback=')
-       .then(res => res.data.query.results.item.map(v => {
-         const linkSplitedBySlash = v.link.split('/');
+     SC.initialize({
+       client_id: '2t9loNQH90kzJcsFCODdigxfp325aq4z',
+       redirect_uri: 'http://example.com/callback'
+     });
+     return SC.get('/users/294673416/tracks')
+       .then(res => res.map(v => {
+         const linkSplitedBySlash = v.permalink_url.split('/');
          return {
            id: linkSplitedBySlash[linkSplitedBySlash.length - 1],
-           pubDate: new Date(v.pubDate),
-           link: this.sanitizer.bypassSecurityTrustResourceUrl(v.link),
+           pubDate: new Date(v.created_at),
+           link: this.sanitizer.bypassSecurityTrustResourceUrl(v.permalink_url),
            title: v.title,
-           summary: v.summary,
+           summary: v.description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, ''),
            description: v.description,
         };
       })).catch(err => alert(err)
