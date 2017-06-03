@@ -33,7 +33,7 @@ export class EpisodeDetailComponent implements OnInit {
       .getEpisode(id)
       .then(episode => {
         this.episode = episode;
-        const detailArea = document.getElementById('episode_detail');
+        const detailArea = document.getElementById('ep_detail_content');
         detailArea.innerHTML = episode.description;
       });
   }
