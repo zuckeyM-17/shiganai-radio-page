@@ -9,30 +9,33 @@ import { Http, Response } from '@angular/http';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  isFormSended: boolean = false;
+  isFormSended: boolean;
   feedback: Feedback = {
     id: null,
-    tw_account: "",
-    content: "",
+    tw_account: '',
+    content: '',
     date: null,
-  }
+  };
 
   constructor(private http: Http) {
+    this.isFormSended = false;
   }
 
   ngOnInit() {
   }
 
   submitFeedback() {
-    if (!this.feedback.content) return;
+    if (!this.feedback.content) {
+      return;
+    };
     this.feedback.id = Number(new Date());
     this.feedback.date = new Date();
     const that = this;
     this.sendFeedback().then(status => {
-      if(status === 200) {
+      if (status === 200) {
         that.clearFeedback();
         that.isFormSended = true;
-        setTimeout(() => {that.isFormSended = false}, 3000);
+        setTimeout(() => { that.isFormSended = false; }, 3000);
       }
     });
   }
@@ -40,9 +43,9 @@ export class FormComponent implements OnInit {
   sendFeedback(): Promise<number> {
     return axios.post(
       'https://hooks.slack.com/services/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'
-      ,JSON.stringify({
-        attachments:[
-          {"text": this.makeSlackText()}
+      , JSON.stringify({
+        attachments: [
+          {text: this.makeSlackText()}
         ]
       })
     )
@@ -52,8 +55,8 @@ export class FormComponent implements OnInit {
 
   clearFeedback() {
     this.feedback.id = null;
-    this.feedback.tw_account = "";
-    this.feedback.content = "";
+    this.feedback.tw_account = '';
+    this.feedback.content = '';
     this.feedback.date = null;
   }
 
@@ -63,15 +66,15 @@ export class FormComponent implements OnInit {
     const content = this.feedback.content;
     const date = this.feedback.date;
 
-    let result = "";
-    result += "id: " + id + "      ";
-    result += "send_date: ";
-    result += date.getFullYear() + "/";
-    result += (date.getMonth()+1) + "/";
-    result += date.getDate() + " ";
-    result += date.getHours() + ":" + ("0" + date.getMinutes()).slice(-2) + "\n";
-    result += tw_account ? "<https://twitter.com/" + tw_account + "|" + tw_account + ">" : "名無し";
-    result += "さんからのメッセージです。\n";
+    let result = '';
+    result += 'id: ' + id + '      ';
+    result += 'send_date: ';
+    result += date.getFullYear() + '/';
+    result += (date.getMonth() + 1) + '/';
+    result += date.getDate() + ' ';
+    result += date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2) + '\n';
+    result += tw_account ? '<https://twitter.com/' + tw_account + '|' + tw_account + '>' : '名無し';
+    result += 'さんからのメッセージです。\n';
     result += content;
     return result;
   }
