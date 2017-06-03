@@ -7,8 +7,8 @@
     </div>
     <div (click)="gotoDetail(episode)" class="ep_summary">
       <span class="ep_pub_date">{{ episode.pubDate.toDateString() }}</span>
-      <p class="ep_title">{{ episode.title }}</p>
-      <div class="ep_summary_content">{{ episode.summary }}</div>
+      <p class="ep_summary_title">{{ episode.title }}</p>
+      <div class="ep_summary_content">{{ episode.summary.substr(0,150)+'...' }}</div>
     </div>
   </li>
 </ul>

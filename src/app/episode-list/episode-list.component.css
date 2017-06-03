@@ -1,5 +1,5 @@
 .list {
-    margin: 10px 10px 10px 30px;
+    margin: 10px 30px 10px 30px;
 }
 .list_item {
     display: flex;
@@ -28,8 +28,13 @@
 .ep_summary:hover {
     background-color: #CAC1A3;
 }
+.ep_summary_title {
+    font-size: 1.4em;
+    margin: 15px 15px 15px 15px;
+    text-decoration: underline;
+}
 .ep_summary_content {
-    padding: 0.5em 1.4em 0.5em 1.4em;
+    margin: 15px 15px 15px 15px;
     font-size: 0.8em;
     /*white-space: nowrap;*/
     /*overflow: hidden;*/
@@ -41,9 +46,4 @@
     background-color: #283044;
     color: #FAF3DD;
     padding: 0.5em;
-}
-.ep_title {
-    font-size: 1.4em;
-    padding: 0.3em 1em 0.3em 1em;
-    margin: 0.3em 1em 0.3em 1em;
 }
