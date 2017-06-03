@@ -28,6 +28,7 @@ export class FooterComponent implements OnInit {
   }
 
   goto(link: string): void {
+    window.scrollTo(0,0);
     this.router.navigate([link]);
   }
 }
