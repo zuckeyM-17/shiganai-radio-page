@@ -9,7 +9,7 @@
     border-bottom: medium solid #bbbbbb;
 }
 .ep_detail_link {
-    font-size: 2em;
+    font-size: .24rem;
     color: #333333;
     text-decoration: none;
     padding: 5px 5px 5px 5px;
@@ -18,14 +18,14 @@
     color: #ff9900;
 }
 #ep_detail_content > p {
-    font-size: 1em;
+    font-size: .12rem;
     margin: 5px 5px 5px 5px;
     color: #283044;
 }
 
 #ep_detail_content > h2 {
     width: fit-content;
-    font-size: 1.3em;
+    font-size: .16rem;
     margin: 20px 0 10px 5px;
     padding: 5px 5px 5px 5px;
     color: #FFFFFF;

@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 625%;
+}
 body {
   margin: 0;
+  font-size: .14em;
 }

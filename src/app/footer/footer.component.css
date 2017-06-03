@@ -10,12 +10,12 @@
   color: #dddddd;
 }
 .title {
-  font-size: 16px;
+  font-size: .16rem;
   margin: 0 0 10px 0;
 }
 .description {
   margin: 0;
-  font-size: 12px;
+  font-size: .12rem;
 }
 .description_list {
   padding: 0 0 0 20px;
@@ -23,7 +23,7 @@
   list-style-type: circle;
 }
 .description_item {
-  font-size: 12px;
+  font-size: .12rem;
 }
 .link {
   text-decoration: none;
@@ -37,6 +37,6 @@
 }
 .twitter-follow-button {
   color: #dddddd;
-  font-size: 12px;
+  font-size: .12rem;
   text-decoration: none;
 }

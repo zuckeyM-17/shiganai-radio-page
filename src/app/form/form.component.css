@@ -3,12 +3,12 @@
   padding: 15px 15px 15px 15px;
   border: 0.5px solid #eeeeee;
   box-shadow: 2px 2px 1px 1px #eeeeee;
-  font-size: 12px;
+  font-size: .12rem;
   background-color: #fdfdfd;
   max-width: 500px;
 }
 .title {
-  font-size: 20px;
+  font-size: .20rem;
   margin: 10px 0 10px 0;
 }
 .at_mark {
@@ -34,7 +34,7 @@
   padding: 5px 5px 5px 5px;
   background-color: #ff9900;
   color: #ffffff;
-  font-size: 16px;
+  font-size: .16rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
