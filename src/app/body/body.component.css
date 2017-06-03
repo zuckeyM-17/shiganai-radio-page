@@ -1,16 +1,17 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 50px 0 50px;
+  background-color: #faf9f5;
 }
 .main {
   flex-grow: 999;
   flex-shrink:1;
   flex-basis:500px;
+  margin: 0 3% 0 3%;
 }
 .sidebar {
   flex-grow: 1;
   flex-shrink:1;
   flex-basis:300px;
-  margin: 20px 0 0 0;
+  margin: 20px 3% 0 3%;
 }
