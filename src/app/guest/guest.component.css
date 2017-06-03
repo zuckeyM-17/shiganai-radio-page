@@ -1,0 +1,52 @@
+.guest_list {
+    display: flex;
+    margin: 1em;
+    -webkit-flex-wrap: wrap; /* Safari */
+    flex-wrap: wrap;
+}
+
+.guest {
+    background-color: #FAF3DD;
+    padding: 0.5em;
+    margin: 0.3em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.twitter_icon {
+    border-radius: 50%;
+    width:  5em;
+    height: 5em;
+}
+
+.guest_image {
+    flex: 2;
+}
+
+.guest_name {
+    flex: 1;
+    margin: auto;
+}
+
+.guest_name>a {
+    color: #283044;
+}
+
+.guest_name>span {
+    color: #283044;
+}
+
+@media screen and (min-width: 880px) {
+    .twitter_icon {
+        width:  7em;
+        height: 7em;
+    }
+    .guest {
+        padding: 1em;
+        margin: 0.7em;
+    }
+    .guest_list {
+        margin: 3em;
+    }
+}

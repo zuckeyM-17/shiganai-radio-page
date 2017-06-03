@@ -15,6 +15,7 @@ import { EpisodeDetailComponent } from './episode-detail/episode-detail.componen
 import { FormComponent } from './form/form.component';
 import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
 import { HostComponent } from './host/host.component';
+import { GuestComponent } from './guest/guest.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HostComponent } from './host/host.component';
     FormComponent,
     TwTimelineComponent,
     HostComponent,
+    GuestComponent,
   ],
   imports: [
     BrowserModule,
