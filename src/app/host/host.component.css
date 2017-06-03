@@ -1,0 +1,40 @@
+.card {
+    background-color: #FAF3DD;
+    margin: 3em;
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.host_image {
+    flex: 1;
+}
+
+.host_description {
+    flex: 2;
+}
+
+.host_description>h1 {
+    color: #283044;
+    font-size: 1.4em;
+    margin: 15px 15px 15px 15px;
+    border-bottom: medium solid #bbbbbb;
+}
+
+.twitter_icon {
+    border-radius: 50%;
+    width:  10em;
+    height: 10em;
+}
+
+@media screen and (min-width: 880px) {
+    .twitter_icon {
+        border-radius: 50%;
+        width:  15em;
+        height: 15em;
+    }
+    .card {
+        flex-direction: row;
+    }
+}
