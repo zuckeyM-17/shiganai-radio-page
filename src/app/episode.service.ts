@@ -10,6 +10,7 @@ const emptyEpisode = {
   link: '',
   description: '',
   summary: '',
+  pubDate: new Date(),
 };
 
 @Injectable()

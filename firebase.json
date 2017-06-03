@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "./*.json",
+      "./*.md",
+      "./*.js",
+      "**/.*",
+      "**/node_modules/**",
+      "**/e2e/**",
+      "**/src/**",
+      ""
+    ]
+  }
+}
