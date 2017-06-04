@@ -15,16 +15,16 @@
   text-decoration: none;
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
-  font-size: 32px;
+  font-size: .32rem;
 }
 .description {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
-  font-size: 12px;
+  font-size: .12rem;
 }
 
 .host-link {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
-  font-size: 12px;
+  font-size: .12rem;
 }

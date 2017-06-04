@@ -26,7 +26,7 @@
 }
 
 .each {
-  margin: 2.5% 0 2.5% 0;
+  margin: 5% 0 5% 0;
   color: #dddddd;
 }
 
@@ -41,12 +41,12 @@
 }
 
 .title {
-  font-size: 16px;
+  font-size: .16rem;
   margin: 0 0 10px 0;
 }
 .description {
   margin: 0;
-  font-size: 12px;
+  font-size: .12rem;
 }
 .description_list {
   padding: 0 0 0 20px;
@@ -54,11 +54,13 @@
   list-style-type: circle;
 }
 .description_item {
-  font-size: 12px;
+  font-size: .12rem;
+  margin: 5px 0 0 0;
 }
 .link {
   text-decoration: none;
   color: #dddddd;
+  cursor: pointer;
 }
 .link:hover {
   color: #999999;
@@ -68,6 +70,6 @@
 }
 .twitter-follow-button {
   color: #dddddd;
-  font-size: 12px;
+  font-size: .12rem;
   text-decoration: none;
 }

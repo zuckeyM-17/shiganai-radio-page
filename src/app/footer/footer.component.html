@@ -39,13 +39,18 @@
       サイトマップ
     </h1>
     <ul class="description_list">
-      <li class="description_item" (click)="this.goto('/')">ホーム</li>
-      <li class="description_item" (click)="this.goto('/host')">パーソナリティ</li>
-      <li class="description_item" (click)="this.goto('/guest')">ゲスト</li>
+      <li class="description_item"><span class="link" (click)="this.goto('/')">ホーム</span></li>
+      <li class="description_item"><span class="link" (click)="this.goto('/host')">パーソナリティ</span></li>
+      <li class="description_item"><span class="link" (click)="this.goto('/guest')">ゲスト</span></li>
     </ul>
   </div>
   </div>
   <div class="copyright">
-    <p>Copyright © 2017 by <a href="https://twitter.com/zuckey_17?lang=ja">zuckey</a>, <a href="https://twitter.com/jumpei_ikegami?lang=ja">gami</a> in Tokyo, Japan.</p>
+    <p>
+      Copyright © 2017 by
+      <a class="link" href="https://twitter.com/zuckey_17">zuckey</a>,
+      <a class="link" href="https://twitter.com/jumpei_ikegami">gami</a>
+      in Tokyo, Japan.
+    </p>
   </div>
 </div>
