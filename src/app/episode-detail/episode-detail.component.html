@@ -1,4 +1,5 @@
 <article class="ep_detail_container">
+    <p *ngIf="this.loading" class="loading">LOADING... Please Wait.</p>
     <h1 class="ep_detail_title">
         <a class="ep_detail_link" [href]="episode.link">{{ episode.title }}</a>
     </h1>
