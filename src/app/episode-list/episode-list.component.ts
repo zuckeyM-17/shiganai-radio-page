@@ -12,12 +12,14 @@ import { Episode } from '../episode';
 export class EpisodeListComponent implements OnInit {
   episodes: Episode[];
   display_all: boolean;
+  loading: boolean;
 
   constructor(
     private episodeService: EpisodeService,
     private router: Router,
     ) {
       this.display_all = false;
+      this.loading = true;
     }
 
   ngOnInit() {
@@ -36,12 +38,13 @@ export class EpisodeListComponent implements OnInit {
           this.episodes = episodes.slice(0, limit);
           this.display_all = false;
         }
+        this.loading = false;
       });
   }
 
   gotoDetail(episode: Episode): void {
     const link = ['/ep', episode['id']];
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     this.router.navigate(link);
   }
 }

@@ -2,5 +2,6 @@
     <h1 class="ep_detail_title">
         <a class="ep_detail_link" [href]="episode.link">{{ episode.title }}</a>
     </h1>
+    <p *ngIf="this.loading" class="loading">LOADING... Please Wait.</p>
     <div id="ep_detail_content"></div>
 </article>

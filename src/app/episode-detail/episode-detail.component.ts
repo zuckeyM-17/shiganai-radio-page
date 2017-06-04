@@ -12,12 +12,13 @@ import { Episode } from '../episode';
 })
 export class EpisodeDetailComponent implements OnInit {
   episode: Episode;
-
+  loading: boolean;
   constructor(
     private route: ActivatedRoute,
     private episodeService: EpisodeService,
     ) {
       this.episode = episodeService.getEmptyEpisode();
+      this.loading = true;
     }
 
   ngOnInit() {
@@ -35,6 +36,7 @@ export class EpisodeDetailComponent implements OnInit {
         this.episode = episode;
         const detailArea = document.getElementById('ep_detail_content');
         detailArea.innerHTML = episode.description;
+        this.loading = false;
       });
   }
 

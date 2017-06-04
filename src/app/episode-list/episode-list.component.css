@@ -1,3 +1,9 @@
+.loading {
+    font-size: .12rem;
+    text-align: center;
+    margin: 3em 0 3em 0;
+    color: #283044;
+}
 .list_item {
     display: flex;
     flex-wrap: nowrap;
@@ -72,4 +78,3 @@
   background-color: #cc9900;
   box-shadow: none;
 }
-
