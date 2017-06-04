@@ -44,6 +44,7 @@
 .description {
   margin: 0;
   font-size: .12rem;
+  line-height: .16rem;
 }
 .description_list {
   padding: 0 0 0 20px;
@@ -52,7 +53,7 @@
 }
 .description_item {
   font-size: .12rem;
-  margin: 5px 0 0 0;
+  margin: 10px 0 10px 0;
 }
 .link {
   text-decoration: none;

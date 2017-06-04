@@ -47,6 +47,7 @@
 .ep_summary_content {
     margin: 15px 15px 15px 15px;
     font-size: .12rem;
+    line-height: .20rem;
 }
 .ep_pub_date {
     font-size: .09rem;
