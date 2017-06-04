@@ -5,6 +5,8 @@
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .host_image {
@@ -37,4 +39,39 @@
     .card {
         flex-direction: row;
     }
+}
+
+.tag_cloud {
+	margin: 0 3em 0 3em;
+	padding: 0.2em;
+	list-style: none;
+}
+.tag_cloud>li {
+	display: inline-block;
+	margin: 0 .3em .3em 0;
+	padding: 0;
+}
+.tag_cloud>li>span {
+	display: inline-block;
+	max-width: 10em;
+	height: 2em;
+	line-height: 2em;
+	padding: 0 1em;
+	background-color: #eeeeee;
+	border: 1px solid #283044;
+	border-radius: 0.2em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #283044;
+	font-size: 0.5em;
+	text-decoration: none;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.host_description>p {
+    margin: 0 0 0 2em;
+    color: #283044;
+    font-size: 1em;
 }
