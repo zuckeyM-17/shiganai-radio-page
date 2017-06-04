@@ -1,3 +1,10 @@
+.loading {
+    font-size: 3em;
+    text-align: center;
+    margin: 3em 0 3em 0;
+    color: #283044;
+}
+
 .ep_detail_container {
     margin: 30px 0 0 0;
     padding: 30px 30px 30px 30px;

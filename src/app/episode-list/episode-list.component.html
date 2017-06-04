@@ -1,4 +1,5 @@
 <ul class="list">
+  <li><p *ngIf="this.loading" class="loading">LOADING... Please Wait.</p></li>
   <li class="list_item" *ngFor="let episode of episodes; let i = index;">
     <div class="play">
       <a [href]="episode.link" class="sc_link">
@@ -12,7 +13,7 @@
     </div>
   </li>
   <li class="toggle_display">
-    <button *ngIf="!this.display_all" class="toggle_display_button" (click)="this.getEpisodes()">もっと見る</button>
-    <button *ngIf="this.display_all" class="toggle_display_button" (click)="this.getEpisodes(10)">閉じる</button>
+      <button *ngIf="(!this.display_all && !this.loading)" class="toggle_display_button" (click)="this.getEpisodes()">もっと見る</button>
+      <button *ngIf="this.display_all" class="toggle_display_button" (click)="this.getEpisodes(10)">閉じる</button>
   </li>
 </ul>
