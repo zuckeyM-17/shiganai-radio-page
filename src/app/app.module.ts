@@ -14,6 +14,8 @@ import { EpisodeListComponent } from './episode-list/episode-list.component';
 import { EpisodeDetailComponent } from './episode-detail/episode-detail.component';
 import { FormComponent } from './form/form.component';
 import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
+import { HostComponent } from './host/host.component';
+import { GuestComponent } from './guest/guest.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
     EpisodeDetailComponent,
     FormComponent,
     TwTimelineComponent,
+    HostComponent,
+    GuestComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
     HttpModule,
     routing,
   ],
-  providers: [EpisodeService],
+  providers: [
+    EpisodeService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 <div id="footer" class="footer">
+  <div class="footer_container">
   <div class="each">
     <h1 class="title">
       <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -31,5 +32,20 @@
           </a>
         </li>
       </ul>
+  </div>
+  <div class="each">
+    <h1 class="title">
+      <i class="fa fa-sitemap" aria-hidden="true"></i>
+      サイトマップ
+    </h1>
+    <ul class="description_list">
+      <li class="description_item" (click)="this.goto('/')">ホーム</li>
+      <li class="description_item" (click)="this.goto('/host')">パーソナリティ</li>
+      <li class="description_item" (click)="this.goto('/guest')">ゲスト</li>
+    </ul>
+  </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © 2017 by <a href="https://twitter.com/zuckey_17?lang=ja">zuckey</a>, <a href="https://twitter.com/jumpei_ikegami?lang=ja">gami</a> in Tokyo, Japan.</p>
   </div>
 </div>
