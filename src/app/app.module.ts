@@ -16,6 +16,7 @@ import { FormComponent } from './form/form.component';
 import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
 import { HostComponent } from './host/host.component';
 import { GuestComponent } from './guest/guest.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { GuestComponent } from './guest/guest.component';
     TwTimelineComponent,
     HostComponent,
     GuestComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
