@@ -9,7 +9,7 @@
   padding: 40px 30px 60px 30px;
 }
 .title-wrapper {
-  margin: 20px 0 5px 0;
+  margin: 20px 0 10px 0;
 }
 .title {
   text-decoration: none;
@@ -21,6 +21,7 @@
   color: #ffffff;
   text-shadow: 1px 1px 2px #000000;
   font-size: .12rem;
+  margin: 10px 0 0 0;
 }
 
 .host-link {

@@ -13,11 +13,11 @@
     flex: 1;
 }
 
-.host_description {
+.description {
     flex: 2;
 }
 
-.host_description>h1 {
+.description>h1 {
     color: #283044;
     font-size: 1.4em;
     margin: 15px 15px 15px 15px;
@@ -29,6 +29,16 @@
     width:  10em;
     height: 10em;
 }
+
+.link {
+    text-decoration: none;
+    color: #283044;
+}
+
+.link:hover {
+    color: #bbbbbb;
+}
+
 
 @media screen and (min-width: 880px) {
     .twitter_icon {
@@ -70,8 +80,8 @@
 	transition: .2s;
 }
 
-.host_description>p {
-    margin: 0 0 0 2em;
+.description_item {
+    margin: .5em 0 0 2em;
     color: #283044;
     font-size: 1em;
 }

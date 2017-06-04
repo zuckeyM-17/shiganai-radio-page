@@ -1,7 +1,10 @@
-<article class="ep_detail_container">
-    <p *ngIf="this.loading" class="loading">LOADING... Please Wait.</p>
-    <h1 class="ep_detail_title">
-        <a class="ep_detail_link" [href]="episode.link">{{ episode.title }}</a>
-    </h1>
-    <div id="ep_detail_content"></div>
+<article class="ep_detail">
+    <span *ngIf="!this.loading"  class="ep_pub_date">{{ episode.pubDate.toDateString() }}</span>
+    <div class="ep_detail_container">
+        <h1 class="ep_detail_title">
+            <a class="ep_detail_link" [href]="episode.link">{{ episode.title }}</a>
+        </h1>
+        <p *ngIf="this.loading" class="loading">LOADING... Please Wait.</p>
+        <div id="ep_detail_content"></div>
+    </div>
 </article>

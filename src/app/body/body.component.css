@@ -14,7 +14,7 @@
   flex-grow: 1;
   flex-shrink:1;
   flex-basis:300px;
-  margin: 20px 3% 0 3%;
+  margin: 20px 10% 0 10%;
 }
 .sidebar_item {
   margin: 0 0 30px 0;
@@ -22,5 +22,17 @@
 @media screen and (min-width: 880px) {
   .sidebar {
     margin: 20px 3% 0 0;
+    display: flex;
+  }
+  .sidebar.relative_bottom {
+    align-items: flex-end;
+  }
+  .sidebar_container {
+    width: 300px;
+  }
+  .sidebar_container.fix_top {
+    position: fixed;
+    top: 25px;
+    width: 300px;
   }
 }

@@ -1,5 +1,5 @@
 .loading {
-    font-size: 3em;
+    font-size: .12rem;
     text-align: center;
     margin: 3em 0 3em 0;
     color: #283044;
@@ -47,11 +47,12 @@
 .ep_summary_content {
     margin: 15px 15px 15px 15px;
     font-size: .12rem;
+    line-height: .20rem;
 }
 .ep_pub_date {
     font-size: .09rem;
     background-color: #283044;
-    color: #FAF3DD;
+    color: #FFFFFF;
     padding: 0.5em;
 }
 .toggle_display {
