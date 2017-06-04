@@ -16,6 +16,11 @@
 .sc_link:hover {
     color: #F15025;
 }
+@media screen and (min-width: 880px) {
+    .sc_link {
+        font-size: .60rem;
+    }
+}
 .ep_summary {
     flex: 1;
     margin: 10px 0 10px 0;
@@ -44,15 +49,27 @@
     padding: 0.5em;
 }
 .toggle_display {
+    text-align: center;
+}
+.toggle_display_button {
     color: #283044;
 }
-
-.toggle_display:hover {
-    color: #CAC1A3;
+.toggle_display_button {
+  width: 100px;
+  padding: 5px 5px 5px 5px;
+  background-color: #ff9900;
+  color: #ffffff;
+  font-size: .16rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 1px 1px 5px 1px #cccccc;
 }
-@media screen and (min-width: 880px) {
-    .sc_link {
-        font-size: .60rem;
-    }
+.toggle_display_button:hover {
+  background-color: #ffa300;
+}
+.toggle_display_button:active {
+  background-color: #cc9900;
+  box-shadow: none;
 }
 
