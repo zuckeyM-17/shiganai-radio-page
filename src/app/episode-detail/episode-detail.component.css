@@ -18,18 +18,19 @@
     color: #ff9900;
 }
 #ep_detail_content > p {
-    font-size: .12rem;
-    margin: 5px 5px 5px 5px;
-    color: #283044;
-}
-
-#ep_detail_content > h2 {
     width: fit-content;
-    font-size: .16rem;
+    font-size: .18rem;
     margin: 20px 0 10px 5px;
-    padding: 5px 5px 5px 5px;
     color: #FFFFFF;
     background-color: #283044;
+}
+
+#ep_detail_content > p > span {
+    display: block;
+    font-size: .16rem;
+    padding: 0;
+    color: #283044;
+    background-color: #FAF3DD;
 }
 
 #ep_detail_content ul {
@@ -38,6 +39,7 @@
 
 #ep_detail_content li {
     list-style-type: circle;
+    font-size: .16rem;
     margin: 10px 0 10px 20px;
 }
 
