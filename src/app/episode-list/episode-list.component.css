@@ -9,8 +9,14 @@
     margin: 0 5px auto 0;
 }
 .sc_link {
-    font-size: 5em;
+    font-size: 3em;
     color: #283044;
+}
+@media screen and (min-width: 880px) {
+    .sc_link {
+        font-size: 5em;
+        color: #283044;
+    }
 }
 .sc_link:hover {
     color: #F15025;

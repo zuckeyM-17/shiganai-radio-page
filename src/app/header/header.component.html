@@ -1,8 +1,11 @@
 <div id="header" class="header">
   <div class="text-wrapper">
-    <h1 class="title-wrapper">
-      <a class="title" href="/">しがないラジオ</a>
+    <h1 class="title-wrapper" (click)="this.goto('/')">
+      <a class="title">しがないラジオ</a>
     </h1>
-    <span class="description">SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト</span>
+    <span class="description">
+      <a class="host-link" (click)="this.goto('/host')">SIerのSEからWeb系エンジニアに転職した2人</a>
+      がお届けするポッドキャスト
+    </span>
   </div>
 </div>
