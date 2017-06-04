@@ -41,7 +41,7 @@ export class EpisodeListComponent implements OnInit {
 
   gotoDetail(episode: Episode): void {
     const link = ['/ep', episode['id']];
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     this.router.navigate(link);
   }
 }
