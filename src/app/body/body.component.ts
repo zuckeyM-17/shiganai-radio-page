@@ -18,8 +18,12 @@ export class BodyComponent implements OnInit {
       const sidebar = document.getElementById('sidebar');
       const sidebar_top = sidebar.getBoundingClientRect().top;
       const sidebar_bottom = sidebar.getBoundingClientRect().bottom;
+      const sidebar_container = document.getElementById('sidebar_container');
+      // FIXME: チカチカ対策
+      const sidebar_container_height = sidebar_container.clientHeight < 1000 ? sidebar_container.clientHeight : 664;
+
       if (sidebar_top < 25) {
-        if (sidebar_bottom < viewHeight - 25) {
+        if (sidebar_bottom < sidebar_container_height + 25) {
           this.sidebar_class = "sidebar relative_bottom";
           this.sidebar_container_class = "sidebar_container";
         } else {
