@@ -32,6 +32,7 @@ export class EpisodeListComponent implements OnInit {
     this.titleService.setTitle(title);
     this.metaService.updateTag({property: 'og:title', content: 'しがないラジオ'});
     this.metaService.updateTag({property: 'og:url', content: url});
+    this.metaService.updateTag({property: 'og:description', content: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト'});
   }
 
   getEpisodes(limit = 0) {
