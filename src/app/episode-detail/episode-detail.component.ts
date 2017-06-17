@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import { EpisodeService } from '../episode.service';
 import { Episode } from '../episode';
@@ -17,6 +17,7 @@ export class EpisodeDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private episodeService: EpisodeService,
+    private titleService: Title,
     private metaService: Meta,
     ) {
       this.episode = episodeService.getEmptyEpisode();
@@ -42,6 +43,7 @@ export class EpisodeDetailComponent implements OnInit {
         detailArea.innerHTML = episode.description;
         this.loading = false;
         const title = this.episode.title + ' | しがないラジオ';
+        this.titleService.setTitle(title);
         this.metaService.updateTag({property: 'og:title', content: title});
       });
   }
