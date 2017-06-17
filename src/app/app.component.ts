@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MetaService } from 'ng2-meta';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,16 @@ import { MetaService } from 'ng2-meta';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  constructor(private metaService: MetaService) {}
+  constructor(
+    private titleService:Title,
+    private metaService: Meta,
+    ) {};
+  ngOnInit() {
+    // デフォルト値を指定
+    const title = 'しがないラジオ';
+    const url = document.location.origin + document.location.pathname;
+    this.titleService.setTitle(title)
+    this.metaService.updateTag({property: 'og:title', content: title});
+    this.metaService.updateTag({property: 'og:url', content: url});
+  }
 }
