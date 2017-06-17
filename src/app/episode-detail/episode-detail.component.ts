@@ -42,9 +42,14 @@ export class EpisodeDetailComponent implements OnInit {
         const detailArea = document.getElementById('ep_detail_content');
         detailArea.innerHTML = episode.description;
         this.loading = false;
+
         const title = this.episode.title + ' | しがないラジオ';
         this.titleService.setTitle(title);
         this.metaService.updateTag({property: 'og:title', content: title});
+
+        const summary = this.episode.summary;
+        const description = summary.substring(0, summary.indexOf('\n'));
+        this.metaService.updateTag({property: 'og:description', content: description});
       });
   }
 
