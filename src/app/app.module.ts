@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MetaModule } from 'ng2-meta';
 
 import { routing } from './app.routing';
 
@@ -16,6 +17,7 @@ import { FormComponent } from './form/form.component';
 import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
 import { HostComponent } from './host/host.component';
 import { GuestComponent } from './guest/guest.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { GuestComponent } from './guest/guest.component';
     FormsModule,
     HttpModule,
     routing,
+    MetaModule.forRoot(),
   ],
   providers: [
     EpisodeService,
