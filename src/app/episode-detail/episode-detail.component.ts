@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { MetaService } from 'ng2-meta';
+import { Meta } from '@angular/platform-browser';
 
 import { EpisodeService } from '../episode.service';
 import { Episode } from '../episode';
@@ -17,7 +17,7 @@ export class EpisodeDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private episodeService: EpisodeService,
-    private metaService: MetaService,
+    private metaService: Meta,
     ) {
       this.episode = episodeService.getEmptyEpisode();
       this.loading = true;
@@ -27,7 +27,8 @@ export class EpisodeDetailComponent implements OnInit {
     this.route.params.forEach((params: Params) => {
       const id = params['id'];
       this.getEpisode(id);
-      this.metaService.setTag('og:url','https://shiganai.org/ep/'+id);
+      const url = document.location.origin + document.location.pathname;
+      this.metaService.updateTag({property: 'og:url', content: url});
     });
   }
 
@@ -40,7 +41,8 @@ export class EpisodeDetailComponent implements OnInit {
         const detailArea = document.getElementById('ep_detail_content');
         detailArea.innerHTML = episode.description;
         this.loading = false;
-        this.metaService.setTitle(this.episode.title+' | しがないラジオ');
+        const title = this.episode.title + ' | しがないラジオ';
+        this.metaService.updateTag({property: 'og:title', content: title});
       });
   }
 

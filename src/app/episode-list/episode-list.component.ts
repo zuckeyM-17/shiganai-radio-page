@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 
 import { EpisodeService } from '../episode.service';
 import { Episode } from '../episode';
@@ -17,6 +18,7 @@ export class EpisodeListComponent implements OnInit {
   constructor(
     private episodeService: EpisodeService,
     private router: Router,
+    private metaService: Meta,
     ) {
       this.display_all = false;
       this.loading = true;
@@ -24,6 +26,9 @@ export class EpisodeListComponent implements OnInit {
 
   ngOnInit() {
     this.getEpisodes(10);
+    const url = document.location.origin + document.location.pathname;
+    this.metaService.updateTag({property: 'og:url', content: url});
+    this.metaService.updateTag({property: 'og:title', content: 'しがないラジオ'});
   }
 
   getEpisodes(limit = 0) {

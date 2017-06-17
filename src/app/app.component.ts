@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MetaService } from 'ng2-meta';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,5 @@ import { MetaService } from 'ng2-meta';
 })
 export class AppComponent {
   title = 'app works!';
-  constructor(private metaService: MetaService) {}
+  constructor(private metaService: Meta) {}
 }

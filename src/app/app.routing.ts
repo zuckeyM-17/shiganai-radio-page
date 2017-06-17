@@ -10,45 +10,18 @@ const appRoutes: Routes = [
     {
         path: '',
         component: EpisodeListComponent,
-        data: {
-            meta: {
-                title: 'しがないラジオ',
-                description: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト.',
-                'og:url': 'https://shiganai.org/',
-            }
-        },
     },
     {
         path: 'ep/:id',
         component: EpisodeDetailComponent,
-        data: {
-            meta: {
-                title: 'しがないラジオ',
-                description: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト.',
-            }
-        },
     },
     {
         path: 'host',
         component: HostComponent,
-        data: {
-            meta: {
-                title: 'パーソナリティ紹介 | しがないラジオ',
-                description: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト.',
-                'og:url': 'https://shiganai.org/host/',
-            }
-        },
     },
     {
         path: 'guest',
         component: GuestComponent,
-        data: {
-            meta: {
-                title: 'ゲスト紹介 | しがないラジオ',
-                description: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト.',
-                'og:url': 'https://shiganai.org/guest/',
-            }
-        },
     },
 ];
 
