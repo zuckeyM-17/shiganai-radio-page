@@ -25,11 +25,11 @@ export class EpisodeDetailComponent implements OnInit {
     }
 
   ngOnInit() {
+    const url = document.location.origin + document.location.pathname;
+    this.metaService.updateTag({property: 'og:url', content: url});
     this.route.params.forEach((params: Params) => {
       const id = params['id'];
       this.getEpisode(id);
-      const url = document.location.origin + document.location.pathname;
-      this.metaService.updateTag({property: 'og:url', content: url});
     });
   }
 
