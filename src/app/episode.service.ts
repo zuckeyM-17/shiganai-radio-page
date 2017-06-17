@@ -34,7 +34,7 @@ export class EpisodeService {
            summary: v.description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, ''),
            description: v.description,
         };
-      })).catch(err => alert(err)
+      })).catch(err => console.error(err)
     );
   }
 

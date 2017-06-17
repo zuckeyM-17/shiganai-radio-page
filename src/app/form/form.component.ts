@@ -50,7 +50,7 @@ export class FormComponent implements OnInit {
       })
     )
     .then(res => res.status)
-    .catch(err => alert(err));
+    .catch(err => console.error(JSON.stringify(err)))
   }
 
   clearFeedback() {
