@@ -29,7 +29,7 @@ export class EpisodeService {
          return {
            id: linkSplitedBySlash[linkSplitedBySlash.length - 1],
            pubDate: new Date(v.created_at),
-           link: this.sanitizer.bypassSecurityTrustResourceUrl(v.permalink_url),
+           link: v.permalink_url,
            title: v.title,
            summary: v.description.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, ''),
            description: v.description,

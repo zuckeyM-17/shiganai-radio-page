@@ -22,17 +22,13 @@
 }
 
 .ep_detail_title {
-    border-bottom: medium solid #bbbbbb;
-}
-.ep_detail_link {
     font-size: .24rem;
     color: #333333;
     text-decoration: none;
     padding: 5px 5px 5px 5px;
+    border-bottom: medium solid #bbbbbb;
 }
-.ep_detail_link:hover {
-    color: #ff9900;
-}
+
 #ep_detail_content > p {
     width: fit-content;
     font-size: .18rem;
