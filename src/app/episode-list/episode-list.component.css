@@ -15,18 +15,7 @@
 .play {
     margin: 0 5px auto 0;
 }
-.sc_link {
-    font-size: .40rem;
-    color: #283044;
-}
-.sc_link:hover {
-    color: #F15025;
-}
-@media screen and (min-width: 880px) {
-    .sc_link {
-        font-size: .60rem;
-    }
-}
+
 .ep_summary {
     flex: 1;
     margin: 10px 0 10px 0;

@@ -3,6 +3,7 @@
     text-align: center;
     margin: 3em 0 3em 0;
     color: #283044;
+    height: 900px;
 }
 
 .ep_detail {
@@ -22,17 +23,18 @@
 }
 
 .ep_detail_title {
-    border-bottom: medium solid #bbbbbb;
-}
-.ep_detail_link {
     font-size: .24rem;
     color: #333333;
     text-decoration: none;
     padding: 5px 5px 5px 5px;
+    border-bottom: medium solid #bbbbbb;
 }
-.ep_detail_link:hover {
-    color: #ff9900;
+
+#ep_soundcloud_embeded {
+    height: 150px;
+    margin: 10px 0 0 0;
 }
+
 #ep_detail_content > p {
     width: fit-content;
     font-size: .18rem;

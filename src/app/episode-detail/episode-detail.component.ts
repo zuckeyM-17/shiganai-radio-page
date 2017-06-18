@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
+import SC from 'soundcloud';
+
 import { EpisodeService } from '../episode.service';
 import { Episode } from '../episode';
 
@@ -41,6 +43,16 @@ export class EpisodeDetailComponent implements OnInit {
         this.episode = episode;
         const detailArea = document.getElementById('ep_detail_content');
         detailArea.innerHTML = episode.description;
+
+        const track_url = this.episode.link;
+        SC.oEmbed(track_url, {
+          auto_play: false,
+          maxheight: 150,
+        }).then(oEmbed => {
+          const soundcloud_embeded = document.getElementById('ep_soundcloud_embeded');
+          soundcloud_embeded.innerHTML = oEmbed.html;
+        });
+
         this.loading = false;
 
         const title = this.episode.title + ' | しがないラジオ';
