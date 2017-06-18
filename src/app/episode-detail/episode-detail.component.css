@@ -29,6 +29,11 @@
     border-bottom: medium solid #bbbbbb;
 }
 
+#ep_soundcloud_embeded {
+    height: 150px;
+    margin: 10px 0 0 0;
+}
+
 #ep_detail_content > p {
     width: fit-content;
     font-size: .18rem;
