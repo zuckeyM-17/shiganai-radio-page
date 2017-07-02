@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "shiganai-radio-page-b06d3"
+    "default": "shiganai-radio-page-b06d3",
+    "staging": "staging-shiganai-radio-page"
   }
 }

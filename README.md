@@ -7,7 +7,10 @@
 - access to http://localhost:4200/
 
 ## Production Build
-- `ng build -prod`
+- `npm run build-prod`
 
-## Deploy
-- `firebase deploy`
+## Production Build & Deploy
+- Production
+    - `npm run deploy-prod`
+- Staging
+    - `npm run deploy-staging`
