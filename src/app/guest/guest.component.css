@@ -5,13 +5,23 @@
     flex-wrap: wrap;
 }
 
-.guest {
-    background-color: #FAF3DD;
+.guest_link {
+    display: block;
     padding: 0.5em;
     margin: 0.3em;
     border-radius: 1em;
+    background-color: #FAF3DD;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    transition: opacity 0.5s;
+}
+.guest_link.has_url:hover {
+    opacity: 0.7;
+}
+.guest_link.no_url {
+    cursor: default;
+    background-color: #eeeeee;
 }
 
 .twitter_icon {
@@ -42,7 +52,7 @@
         width:  7em;
         height: 7em;
     }
-    .guest {
+    .guest_link {
         padding: 1em;
         margin: 0.7em;
     }

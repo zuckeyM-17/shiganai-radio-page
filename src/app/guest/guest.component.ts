@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { GUESTS } from './guests';
 
 @Component({
   selector: 'app-guest',
@@ -7,11 +8,14 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./guest.component.css']
 })
 export class GuestComponent implements OnInit {
+  guests: object[];
 
   constructor(
     private titleService: Title,
     private metaService: Meta,
-  ) { }
+  ) {
+    this.guests = [];
+  }
 
   ngOnInit() {
     const title = 'ゲスト紹介 | しがないラジオ';
@@ -20,6 +24,6 @@ export class GuestComponent implements OnInit {
     this.metaService.updateTag({property: 'og:title', content: title});
     this.metaService.updateTag({property: 'og:url', content: url});
     this.metaService.updateTag({property: 'og:description', content: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト'});
+    this.guests = GUESTS;
   }
-
 }
