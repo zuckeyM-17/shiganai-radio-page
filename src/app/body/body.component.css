@@ -15,8 +15,8 @@
 }
 @media screen and (min-width: 990px) {
   .wrapper {
-    position: relative;
     width: 990px;
+    margin: 0 auto 0 auto;
     display: flex;
   }
   .main {

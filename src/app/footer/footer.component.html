@@ -1,49 +1,49 @@
 <div id="footer" class="footer">
   <div class="footer_container">
-  <div class="each">
-    <h1 class="title">
-      <i class="fa fa-twitter" aria-hidden="true"></i>
-      フィードバック
+    <div class="each">
+      <h1 class="title">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        フィードバック
       </h1>
-    <p class="description">
-      しがないラジオでは、フィードバックをTwitterで募集しています。
-    </p>
-    <p class="description">
-      ハッシュタグ
-      <a class="link" href="https://twitter.com/search?q=%23%E3%81%97%E3%81%8C%E3%81%AA%E3%81%84%E3%83%A9%E3%82%B8%E3%82%AA">
-        #しがないラジオ
-      </a>
-      まで、「感想」、「話して欲しい話題」、「改善して欲しいこと」など、お寄せください。
-    </p>
-    <div class="follow">
-      <a href="https://twitter.com/shiganaiRadio" class="twitter-follow-button" data-show-count="false">Follow @shiganaiRadio</a>
+      <p class="description">
+        しがないラジオでは、フィードバックをTwitterで募集しています。
+      </p>
+      <p class="description">
+        ハッシュタグ
+        <a class="link" href="https://twitter.com/search?q=%23%E3%81%97%E3%81%8C%E3%81%AA%E3%81%84%E3%83%A9%E3%82%B8%E3%82%AA">
+          #しがないラジオ
+        </a>
+        まで、「感想」、「話して欲しい話題」、「改善して欲しいこと」など、お寄せください。
+      </p>
+      <div class="follow">
+        <a href="https://twitter.com/shiganaiRadio" class="twitter-follow-button" data-show-count="false">Follow @shiganaiRadio</a>
+      </div>
     </div>
-  </div>
-  <div class="each">
-    <h1 class="title">
-      <i class="fa fa-rss" aria-hidden="true"></i>
-      RSSフィード
-    </h1>
-    <p class="description">RSSの購読は、こちらからお願いします。</p>
+    <div class="each">
+      <h1 class="title">
+        <i class="fa fa-rss" aria-hidden="true"></i>
+        RSSフィード
+      </h1>
+      <p class="description">RSSの購読は、こちらからお願いします。</p>
+        <ul class="description_list">
+          <li class="description_item">
+            <a class="link" href="http://feeds.soundcloud.com/users/soundcloud:users:294673416/sounds.rss">
+              RSSフィード購読
+            </a>
+          </li>
+        </ul>
+    </div>
+    <div class="each">
+      <h1 class="title">
+        <i class="fa fa-sitemap" aria-hidden="true"></i>
+        サイトマップ
+      </h1>
       <ul class="description_list">
-        <li class="description_item">
-          <a class="link" href="http://feeds.soundcloud.com/users/soundcloud:users:294673416/sounds.rss">
-            RSSフィード購読
-          </a>
-        </li>
+        <li class="description_item"><span class="link" (click)="this.goto('/')">ホーム</span></li>
+        <li class="description_item"><span class="link" (click)="this.goto('/host')">パーソナリティ</span></li>
+        <li class="description_item"><span class="link" (click)="this.goto('/guest')">ゲスト</span></li>
       </ul>
-  </div>
-  <div class="each">
-    <h1 class="title">
-      <i class="fa fa-sitemap" aria-hidden="true"></i>
-      サイトマップ
-    </h1>
-    <ul class="description_list">
-      <li class="description_item"><span class="link" (click)="this.goto('/')">ホーム</span></li>
-      <li class="description_item"><span class="link" (click)="this.goto('/host')">パーソナリティ</span></li>
-      <li class="description_item"><span class="link" (click)="this.goto('/guest')">ゲスト</span></li>
-    </ul>
-  </div>
+    </div>
   </div>
   <div class="copyright">
     <p>
