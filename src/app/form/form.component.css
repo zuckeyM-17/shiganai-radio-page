@@ -6,6 +6,7 @@
   font-size: .12rem;
   background-color: #fdfdfd;
   max-width: 500px;
+  border-radius: 10px;
 }
 .title {
   font-size: .20rem;

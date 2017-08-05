@@ -4,6 +4,7 @@
   box-shadow: 2px 2px 1px 1px #eeeeee;
   background-color: #fdfdfd;
   max-width: 500px;
+  border-radius: 10px;
 }
 .twitter-timeline {
   color: #ffffff;

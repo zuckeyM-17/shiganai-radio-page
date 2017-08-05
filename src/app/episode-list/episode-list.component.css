@@ -23,6 +23,7 @@
     border-radius: 0.25em;
     padding: 27px 27px 27px 27px;
     cursor: pointer;
+    border-radius: 10px;
 }
 .ep_summary:hover {
     background-color: #CAC1A3;
@@ -38,6 +39,7 @@
     background-color: #283044;
     color: #FFFFFF;
     font-size: .09rem;
+    border-radius: 10px 0 0 0;
 }
 .ep_summary_title {
     font-size: .24rem;
