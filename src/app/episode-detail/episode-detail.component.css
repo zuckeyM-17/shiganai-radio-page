@@ -8,25 +8,31 @@
 
 .ep_detail {
     margin: 30px 0 0 0;
-    padding: 3px 3px 3px 3px;
     background-color: #FAF3DD;
     color: #283044;
 }
 .ep_detail_container {
+    position: relative;
     padding: 27px 27px 27px 27px;
 }
 .ep_pub_date {
-    font-size: .09rem;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+    width: 90px;
+    text-align: center;
     background-color: #283044;
     color: #FFFFFF;
-    padding: 0.5em;
+    font-size: .09rem;
 }
 
 .ep_detail_title {
     font-size: .24rem;
     color: #333333;
     text-decoration: none;
-    padding: 5px 5px 5px 5px;
+    /* padding: 5px 5px 5px 5px; */
     border-bottom: medium solid #bbbbbb;
 }
 
@@ -54,7 +60,7 @@
 }
 
 #ep_detail_content ul {
-    margin: 10px 0 20px 20px;
+     margin: 10px 0 20px 20px;
 }
 
 #ep_detail_content li {
@@ -67,6 +73,7 @@
     text-decoration: none;
     color: #283044;
     border-bottom: 0.5px solid #283044;
+    line-height: 1.6;
 }
 
 #ep_detail_content a:hover {

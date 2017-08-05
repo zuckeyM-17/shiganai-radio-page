@@ -1,7 +1,7 @@
 <article class="ep_detail">
-    <span *ngIf="this.loading" class="ep_pub_date">Xxx Xxx 99 20XX</span>
-    <span *ngIf="!this.loading" class="ep_pub_date">{{ episode.pubDate.toDateString() }}</span>
     <div class="ep_detail_container">
+        <span *ngIf="this.loading" class="ep_pub_date">Xxx Xxx 99 20XX</span>
+        <span *ngIf="!this.loading" class="ep_pub_date">{{ episode.pubDate.toDateString() }}</span>
         <h1 *ngIf="this.loading" class="ep_detail_title">xx.XX</h1>
         <h1 *ngIf="!this.loading" class="ep_detail_title">{{ episode.title }}</h1>
         <div id="ep_soundcloud_embeded"></div>
