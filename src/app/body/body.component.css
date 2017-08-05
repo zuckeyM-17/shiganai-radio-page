@@ -8,7 +8,7 @@
   max-width: 600px;
 }
 
-.sidebar {
+.sidebar_wrapper {
   margin: 0 auto 0 auto;
   width: 300px;
 }
@@ -27,17 +27,17 @@
     margin: 0 30px 0 30px;
     width: 600px;
   }
-  .sidebar {
+  .sidebar_wrapper {
     margin: 0 30px 0 0;
     display: flex;
   }
-  .sidebar.relative_bottom {
+  .sidebar_wrapper.relative_bottom {
     align-items: flex-end;
   }
-  .sidebar_container {
+  .sidebar_content {
     width: 300px;
   }
-  .sidebar_container.fix_top {
+  .sidebar_content.fix_top {
     position: fixed;
     top: 25px;
     width: 300px;
