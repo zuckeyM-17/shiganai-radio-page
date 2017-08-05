@@ -1,14 +1,28 @@
 <ul class="list">
-  <li><p *ngIf="this.loading" class="loading">LOADING... Please Wait.</p></li>
+  <li>
+    <p *ngIf="this.loading" class="loading">
+      LOADING... Please Wait.
+    </p>
+  </li>
   <li class="list_item" *ngFor="let episode of episodes; let i = index;">
     <div (click)="gotoDetail(episode)" class="ep_summary">
-      <span class="ep_pub_date">{{ episode.pubDate.toDateString() }}</span>
-      <p class="ep_summary_title">{{ episode.title }}</p>
-      <div class="ep_summary_content">{{ episode.summary.substr(0,150)+'...' }}</div>
+      <span class="ep_pub_date">
+        {{ episode.pubDate.toDateString() }}
+      </span>
+      <p class="ep_summary_title">
+        {{ episode.title }}
+      </p>
+      <div class="ep_summary_content">
+        {{ episode.summary.substr(0,150)+'...' }}
+      </div>
     </div>
   </li>
   <li class="toggle_display">
-      <button *ngIf="(!this.display_all && !this.loading)" class="toggle_display_button" (click)="this.getEpisodes()">もっと見る</button>
-      <button *ngIf="this.display_all" class="toggle_display_button" (click)="this.getEpisodes(10)">閉じる</button>
+    <button *ngIf="(!this.display_all && !this.loading)" class="toggle_display_button" (click)="this.getEpisodes()">
+      もっと見る
+    </button>
+    <button *ngIf="this.display_all" class="toggle_display_button" (click)="this.getEpisodes(10)">
+      閉じる
+    </button>
   </li>
 </ul>
