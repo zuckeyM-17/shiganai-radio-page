@@ -1,14 +1,16 @@
 <div class="container">
-  <div class="main">
-    <router-outlet></router-outlet>
-  </div>
-  <div [class]="sidebar_class" id="sidebar">
-    <div [class]="sidebar_container_class" id="sidebar_container">
-      <div id="form" class="sidebar_item">
-        <app-form></app-form>
-      </div>
-      <div id="tw_timeline" class="sidebar_item">
-        <app-tw-timeline></app-tw-timeline>
+  <div class="wrapper">
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+    <div [class]="sidebar_w_classes" id="sidebar_wrapper">
+      <div [class]="sidebar_content_class" id="sidebar_content">
+        <div id="form" class="sidebar_item">
+          <app-form></app-form>
+        </div>
+        <div id="tw_timeline" class="sidebar_item">
+          <app-tw-timeline></app-tw-timeline>
+        </div>
       </div>
     </div>
   </div>
