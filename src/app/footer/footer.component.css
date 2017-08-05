@@ -10,6 +10,7 @@
 .copyright {
   padding: 0 30px 30px 30px;
   font-size: 10px;
+  text-align: right;
   color: #dddddd;
 }
 
@@ -53,13 +54,11 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 800px) {
   .footer_container {
     display: flex;
-    flex-direction: row;
   }
   .each {
     flex: 1;
-    margin: 0 5% 0 5%;
   }
 }
