@@ -1,19 +1,17 @@
-.loading {
-    font-size: .12rem;
-    text-align: center;
-    margin: 3em 0 3em 0;
-    color: #283044;
-    height: 900px;
-}
-
 .ep_detail {
-    margin: 30px 0 0 0;
     background-color: #FAF3DD;
     color: #283044;
 }
 .ep_detail_container {
     position: relative;
     padding: 27px 27px 27px 27px;
+}
+.loading {
+    font-size: .12rem;
+    text-align: center;
+    margin: 3em 0 3em 0;
+    color: #283044;
+    height: 900px;
 }
 .ep_pub_date {
     position: absolute;
@@ -32,7 +30,7 @@
     font-size: .24rem;
     color: #333333;
     text-decoration: none;
-    /* padding: 5px 5px 5px 5px; */
+    padding: 5px 5px 5px 5px;
     border-bottom: medium solid #bbbbbb;
 }
 
