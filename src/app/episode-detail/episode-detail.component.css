@@ -1,6 +1,7 @@
 .ep_detail {
     background-color: #FAF3DD;
     color: #283044;
+    border-radius: 10px;
 }
 .ep_detail_container {
     position: relative;
@@ -24,6 +25,7 @@
     background-color: #283044;
     color: #FFFFFF;
     font-size: .09rem;
+    border-radius: 10px 0 0 0;
 }
 
 .ep_detail_title {
