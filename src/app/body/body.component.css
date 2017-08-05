@@ -2,17 +2,21 @@
   background-color: #faf9f5;
   padding: 30px 30px 30px 30px;
 }
+
 .main {
   margin: 0 auto 30px auto;
   max-width: 600px;
 }
+
 .sidebar {
   margin: 0 auto 0 auto;
   width: 300px;
 }
+
 .sidebar_item {
   margin: 30px 0 0 0;
 }
+
 @media screen and (min-width: 990px) {
   .wrapper {
     width: 990px;
@@ -24,7 +28,7 @@
     width: 600px;
   }
   .sidebar {
-    margin: 30px 30px 0 0;
+    margin: 0 30px 0 0;
     display: flex;
   }
   .sidebar.relative_bottom {
@@ -37,5 +41,8 @@
     position: fixed;
     top: 25px;
     width: 300px;
+  }
+  .sidebar_item:first-child {
+    margin: 0 0 30px 0;
   }
 }
