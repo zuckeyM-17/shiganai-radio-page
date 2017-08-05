@@ -1,26 +1,15 @@
 <div class="guest_list">
-  <div class="guest">
+  <div class="guest" *ngFor="let guest of guests;">
     <div class="guest_image">
-      <img class="twitter_icon" src="../../assets/image/default.png"/>
+      <img class="twitter_icon" [attr.src]="guest.img"/>
     </div>
     <div class="guest_name">
-      <span>murasaki</span>
-    </div>
-  </div>
-  <div class="guest">
-    <div class="guest_image">
-      <img class="twitter_icon" src="../../assets/image/mittuntun.png"/>
-    </div>
-    <div class="guest_name">
-      <a href="https://twitter.com/mittuntun?lang=ja">mittuntun</a>
-    </div>
-  </div>
-  <div class="guest">
-    <div class="guest_image">
-      <img class="twitter_icon" src="../../assets/image/HKDnet.jpg"/>
-    </div>
-    <div class="guest_name">
-      <a href="https://twitter.com/HKDnet?lang=ja">HKDnet</a>
+      <div *ngIf="guest.url">
+        <a [attr.href]="guest.url">{{ guest.name }}</a>
+      </div>
+      <div *ngIf="!guest.url">
+        <span>{{ guest.name }}</span>
+      </div>
     </div>
   </div>
 </div>
