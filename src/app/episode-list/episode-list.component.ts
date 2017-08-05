@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -14,6 +14,8 @@ export class EpisodeListComponent implements OnInit {
   episodes: Episode[];
   display_all: boolean;
   loading: boolean;
+  saved_sc_top: number;
+  auto_scrolling: boolean;
 
   constructor(
     private episodeService: EpisodeService,
@@ -35,6 +37,14 @@ export class EpisodeListComponent implements OnInit {
     this.metaService.updateTag({property: 'og:description', content: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト'});
   }
 
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    if (this.auto_scrolling) {
+      window.scrollTo(0, this.saved_sc_top);
+      this.auto_scrolling = false;
+    }
+  }
+
   getEpisodes(limit = 0) {
     this
       .episodeService
@@ -48,6 +58,9 @@ export class EpisodeListComponent implements OnInit {
           this.display_all = false;
         }
         this.loading = false;
+        // スクロール問題を泥臭く解消
+        this.saved_sc_top = document.body.scrollTop;
+        this.auto_scrolling = true;
       });
   }
 
