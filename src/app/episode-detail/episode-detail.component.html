@@ -1,21 +1,50 @@
-<article class="ep_detail">
-  <div class="ep_detail_container">
-    <p *ngIf="this.loading" class="loading">
+<article
+  class="ep_detail"
+>
+  <div
+    class="ep_detail_container"
+  >
+    <p
+      *ngIf="this.loading"
+      class="loading"
+    >
       LOADING... Please Wait.
     </p>
-    <span *ngIf="this.loading" class="ep_pub_date">
+    <span
+      *ngIf="this.loading"
+      class="ep_pub_date"
+    >
       Xxx Xxx 99 20XX
     </span>
-    <span *ngIf="!this.loading" class="ep_pub_date">
+    <span
+      *ngIf="!this.loading"
+      class="ep_pub_date"
+    >
       {{ episode.pubDate.toDateString() }}
     </span>
-    <h1 *ngIf="this.loading" class="ep_detail_title">
+    <h1
+      *ngIf="this.loading"
+      class="ep_detail_title"
+    >
       xx.XX
     </h1>
-    <h1 *ngIf="!this.loading" class="ep_detail_title">
+    <h1
+      *ngIf="!this.loading"
+      class="ep_detail_title"
+    >
       {{ episode.title }}
     </h1>
     <div id="ep_soundcloud_embeded"></div>
+    <div class="tweet">
+      <a
+        href="http://twitter.com/?status=%23%E3%81%97%E3%81%8C%E3%81%AA%E3%81%84%E3%83%A9%E3%82%B8%E3%82%AA"
+        class="tweet-button"
+        target="_blank"
+      >
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        「#しがないラジオ」でTweet！
+      </a>
+    </div>
     <div id="ep_detail_content"></div>
   </div>
 </article>
