@@ -40,10 +40,15 @@ export class EpisodeService {
 
   getEpisode(id: string): Promise<Episode> {
     return this.getEpisodes()
-              .then(episodes => episodes.find(episode => episode['id'] === id));
+      .then(episodes => episodes.find(episode => episode['id'] === id));
   }
 
   getEmptyEpisode(): Episode {
     return emptyEpisode;
+  }
+
+  getGuestsEpisodes(name: string): Promise<Episode[]> {
+    return this.getEpisodes()
+      .then(episodes => episodes.filter(episode => episode['title'].includes(name)));
   }
 }

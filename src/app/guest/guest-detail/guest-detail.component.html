@@ -1,0 +1,32 @@
+<div class="guest_detail">
+    <div class="guest_image">
+      <img class="twitter_icon" [attr.src]="guest.img"/>
+    </div>
+    <div class="description">
+      <h1>{{ guest.name }}</h1>
+      <div
+        *ngIf="!guest.no_url"
+        class="tweet"
+      >
+        <a
+          [attr.href]="guest.url"
+          class="tweet-button"
+          target="_blank"
+        >
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          @{{ guest.name }}
+        </a>
+      </div>
+      <ul
+        class="episodes"
+        *ngFor="let episode of episodes;"
+      >
+        <li
+          (click)="gotoDetail(episode)"
+          class="ep_title"
+        >
+          <span>{{ episode.title }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
