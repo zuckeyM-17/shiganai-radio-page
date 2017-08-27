@@ -1,7 +1,7 @@
 <div class="guest_list">
   <div class="guest" *ngFor="let guest of guests;">
     <a [ngClass]="guest.no_url?['guest_link','no_url']:['guest_link','has_url']"
-      [attr.href]="guest.url">
+      [attr.href]="'guest/' + guest.name">
       <div class="guest_image">
         <img class="twitter_icon" [attr.src]="guest.img"/>
       </div>

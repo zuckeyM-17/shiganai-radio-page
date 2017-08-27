@@ -1,0 +1,51 @@
+.guest_detail {
+  background-color: #FAF3DD;
+  margin: 3em;
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest_image {
+  flex: 1;
+}
+
+.description {
+  flex: 2;
+}
+
+.description>h1 {
+  color: #283044;
+  font-size: .24rem;
+  margin: 15px 15px 15px 15px;
+  border-bottom: medium solid #bbbbbb;
+}
+
+.twitter_icon {
+    border-radius: 50%;
+    width:  15em;
+    height: 15em;
+}
+
+.tweet-button {
+  color: #ffffff;
+  font-size: .12rem;
+  text-decoration: none;
+  background-color: #55acee;
+  padding: 0 5px;
+  margin: 0 20px;
+  border-radius: 3px;
+}
+
+.ep_title {
+  font-size: .16rem;
+  margin: 5px 20px;
+  padding: 5px 5px 10px;
+}
+
+.ep_title:hover {
+  background-color: #CAC1A3;
+}
