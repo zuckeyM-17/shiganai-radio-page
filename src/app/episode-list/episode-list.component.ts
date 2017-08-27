@@ -37,7 +37,7 @@ export class EpisodeListComponent implements OnInit {
     this.metaService.updateTag({property: 'og:description', content: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト'});
   }
 
-  @HostListener("window:scroll", [])
+  @HostListener('window:scroll', [])
   onWindowScroll() {
     if (this.auto_scrolling) {
       window.scrollTo(0, this.saved_sc_top);
