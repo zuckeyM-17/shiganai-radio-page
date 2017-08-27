@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { GUESTS } from './guests';
+import { Guest } from '../guest';
 
 @Component({
   selector: 'app-guest',
@@ -8,7 +9,7 @@ import { GUESTS } from './guests';
   styleUrls: ['./guest.component.css']
 })
 export class GuestComponent implements OnInit {
-  guests: object[];
+  guests: Guest[];
 
   constructor(
     private titleService: Title,
