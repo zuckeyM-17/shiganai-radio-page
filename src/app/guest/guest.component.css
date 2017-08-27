@@ -15,13 +15,8 @@
     flex-direction: column;
     text-decoration: none;
     transition: opacity 0.5s;
-}
-.guest_link.has_url:hover {
-    opacity: 0.7;
-}
-.guest_link.no_url {
-    cursor: default;
-    background-color: #eeeeee;
+    border: 0.5px solid #eeeeee;
+    box-shadow: 2px 2px 1px 1px #eeeeee;
 }
 
 .twitter_icon {
@@ -34,17 +29,21 @@
     flex: 2;
 }
 
+.guest_link:hover .guest_image{
+    opacity: 0.7;
+}
+
 .guest_name {
     flex: 1;
     margin: auto;
 }
 
-.guest_name>a {
+.guest_name>span {
     color: #283044;
 }
 
-.guest_name>span {
-    color: #283044;
+.guest_link:hover .guest_name>span{
+    color: #bbbbbb;
 }
 
 @media screen and (min-width: 880px) {

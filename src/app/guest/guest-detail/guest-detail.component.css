@@ -1,12 +1,13 @@
 .guest_detail {
   background-color: #FAF3DD;
-  margin: 3em;
-  padding: 1em;
-  border-radius: 1em;
+  padding: 27px 27px 27px 27px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 0.5px solid #eeeeee;
+  box-shadow: 2px 2px 1px 1px #eeeeee;
 }
 
 .guest_image {
@@ -34,8 +35,8 @@
   color: #ffffff;
   font-size: .12rem;
   text-decoration: none;
-  background-color: #55acee;
-  padding: 0 5px;
+  background-color: #1b95e0;
+  padding: 1px 6px 1px 6px;
   margin: 0 20px;
   border-radius: 3px;
 }
@@ -44,8 +45,10 @@
   font-size: .16rem;
   margin: 5px 20px;
   padding: 5px 5px 10px;
+  cursor: pointer;
+  line-height: .24rem;
 }
 
 .ep_title:hover {
-  background-color: #CAC1A3;
+  color: #bbbbbb;
 }

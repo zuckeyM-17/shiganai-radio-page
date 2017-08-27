@@ -24,9 +24,11 @@
     padding: 27px 27px 27px 27px;
     cursor: pointer;
     border-radius: 10px;
+    border: 0.5px solid #eeeeee;
+    box-shadow: 2px 2px 1px 1px #eeeeee;
 }
 .ep_summary:hover {
-    background-color: #CAC1A3;
+    color: #bbbbbb;
 }
 .ep_pub_date {
     position: absolute;
