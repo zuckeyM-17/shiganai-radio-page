@@ -20,7 +20,7 @@ export class EpisodeService {
 
   getEpisodes(): Promise<Episode[]> {
      SC.initialize({
-       client_id: '2t9loNQH90kzJcsFCODdigxfp325aq4z',
+       client_id: 'nviGqqUJ1aoaFVSMA7EdLE3IZJLwYFKU',
        redirect_uri: 'http://example.com/callback'
      });
      return SC.get('/users/294673416/tracks')
