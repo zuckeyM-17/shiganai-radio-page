@@ -50,4 +50,10 @@ export const GUESTS: Guest[] = [
     'img': '../../assets/image/kazu_pon.png',
     'no_url': false,
   },
+  {
+    'name': 'monry',
+    'url': 'https://twitter.com/monry?lang=ja',
+    'img': '../../assets/image/monry.jpg',
+    'no_url': false,
+  },
 ];
