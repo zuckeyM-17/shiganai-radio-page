@@ -57,12 +57,9 @@
     text-align: center;
 }
 .toggle_display_button {
-    color: #283044;
-}
-.toggle_display_button {
   width: 100px;
   padding: 5px 5px 5px 5px;
-  background-color: #ff9900;
+  background-color: #e58a31;
   color: #ffffff;
   font-size: .16rem;
   border: none;
@@ -71,9 +68,9 @@
   box-shadow: 1px 1px 5px 1px #cccccc;
 }
 .toggle_display_button:hover {
-  background-color: #ffa300;
+  background-color: #e6974c;
 }
 .toggle_display_button:active {
-  background-color: #cc9900;
+  background-color: #c4742a;
   box-shadow: none;
 }
