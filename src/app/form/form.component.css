@@ -33,7 +33,7 @@
 .submit {
   width: 100px;
   padding: 5px 5px 5px 5px;
-  background-color: #ff9900;
+  background-color: #e58a31;
   color: #ffffff;
   font-size: .16rem;
   border: none;
@@ -42,9 +42,9 @@
   box-shadow: 1px 1px 5px 1px #cccccc;
 }
 .submit:hover {
-  background-color: #ffa300;
+  background-color: #e6974c;
 }
 .submit:active {
-  background-color: #cc9900;
+  background-color: #c4742a;
   box-shadow: none;
 }

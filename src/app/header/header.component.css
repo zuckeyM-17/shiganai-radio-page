@@ -1,8 +1,9 @@
 .header {
-  width: 100%;
+  width: calc(100% + 6px); /* svgだと左右に数pxの余白が出るやつ対策 */
   height: 33vw; /* viewportの幅の1/3 */
   max-height: 200px; /* width=600px以上は変化させない */
-  background-image: url("../../assets/image/header_background.png");
+  background-image: url("../../assets/image/header_background.svg");
+  background-position: -3px 0; /* svgだと左右に数pxの余白が出るやつ対策 */
   background-size: cover;
   /* 上下左右の中央寄せ */
   display: flex;
@@ -10,7 +11,7 @@
   align-items: center;
 }
 .header_logo {
-  padding: 5%;
+  padding: 7% 5% 5% 5%;
   max-width: 600px; /* width=600px以上は変化させない */
 }
 .header_logo img {
