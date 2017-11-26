@@ -11,7 +11,7 @@
   align-items: center;
 }
 .header_logo {
-  padding: 5%;
+  padding: 7% 5% 5% 5%;
   max-width: 600px; /* width=600px以上は変化させない */
 }
 .header_logo img {
