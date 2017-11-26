@@ -3,7 +3,7 @@
 - `git clone git@github.com:zuckeyM-17/shiganai-radio-page.git`
 - `cd shiganai-radio-page`
 - `npm install`
-- `ng serve`
+- `npm run start`
 - access to http://localhost:4200/
 
 ## Production Build
