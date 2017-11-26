@@ -35,6 +35,9 @@ export class EpisodeDetailComponent implements OnInit {
     });
 
     // tweetボタンをactiveに
+    if (window['twttr']) {
+      window['twttr'].widgets.load();
+    }
     const result = !function(d, s, id) {
       let js;
       const fjs = d.getElementsByTagName(s)[0],
