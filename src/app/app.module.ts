@@ -17,6 +17,7 @@ import { TwTimelineComponent } from './tw-timeline/tw-timeline.component';
 import { HostComponent } from './host/host.component';
 import { GuestComponent } from './guest/guest.component';
 import { GuestDetailComponent } from './guest/guest-detail/guest-detail.component';
+import { UserService } from 'app/user.service';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { GuestDetailComponent } from './guest/guest-detail/guest-detail.componen
   ],
   providers: [
     EpisodeService,
+    UserService,
   ],
   bootstrap: [AppComponent]
 })

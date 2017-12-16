@@ -4,6 +4,8 @@ import { Title, Meta } from '@angular/platform-browser';
 
 import { EpisodeService } from '../episode.service';
 import { Episode } from '../episode';
+import { UserService } from '../user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-episode-list',
@@ -18,6 +20,7 @@ export class EpisodeListComponent implements OnInit {
   auto_scrolling: boolean;
 
   constructor(
+    private userService: UserService,
     private episodeService: EpisodeService,
     private router: Router,
     private titleService: Title,
@@ -29,6 +32,7 @@ export class EpisodeListComponent implements OnInit {
 
   ngOnInit() {
     this.getEpisodes(10);
+    this.userService.getUserData().then(user => console.log(user.trackCount));
     const title = 'しがないラジオ';
     const url = document.location.origin + document.location.pathname;
     this.titleService.setTitle(title);
