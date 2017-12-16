@@ -15,6 +15,11 @@
 .play {
     margin: 0 5px auto 0;
 }
+
+a {
+    text-decoration: none;
+}
+
 .ep_summary {
     position: relative;
     flex: 1;
@@ -53,24 +58,31 @@
     line-height: .20rem;
     margin: 10px 0 0 0;
 }
-.toggle_display {
+.pagination {
     text-align: center;
 }
-.toggle_display_button {
-  width: 100px;
-  padding: 5px 5px 5px 5px;
+.selectedPage {
+  margin: 0px 6px;
+  padding: 2px 5px 2px 5px;
   background-color: #e58a31;
   color: #ffffff;
   font-size: .16rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   outline: none;
   box-shadow: 1px 1px 5px 1px #cccccc;
+  text-align: center;
 }
-.toggle_display_button:hover {
-  background-color: #e6974c;
-}
-.toggle_display_button:active {
-  background-color: #c4742a;
-  box-shadow: none;
+
+.page {
+  margin: 0px 6px;
+  padding: 2px 5px 2px 5px;
+  background-color: #FAF3DD;
+  color: #283044;
+  font-size: .16rem;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: 1px 1px 5px 1px #cccccc;
+  text-align: center;
 }
