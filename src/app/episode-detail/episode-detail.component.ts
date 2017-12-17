@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -21,6 +21,7 @@ export class EpisodeDetailComponent implements OnInit {
     private episodeService: EpisodeService,
     private titleService: Title,
     private metaService: Meta,
+    private ref: ChangeDetectorRef,
     ) {
       this.episode = episodeService.getEmptyEpisode();
       this.loading = true;
@@ -78,6 +79,7 @@ export class EpisodeDetailComponent implements OnInit {
         const summary = this.episode.summary;
         const description = summary.substring(0, summary.indexOf('\n'));
         this.metaService.updateTag({property: 'og:description', content: description});
+        this.ref.detectChanges();
       });
   }
 

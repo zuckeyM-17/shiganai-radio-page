@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { GUESTS } from '../guests';
@@ -21,7 +21,10 @@ export class GuestDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private episodeService: EpisodeService,
-  ) {  }
+    private ref: ChangeDetectorRef,
+  ) {
+    this.episodes = [];
+   }
 
   ngOnInit() {
     let name;
@@ -29,16 +32,18 @@ export class GuestDetailComponent implements OnInit {
       name = params['name'];
     });
     this.guest = GUESTS.find(g => g.name === name);
-    this.episodeService.getGuestsEpisodes(name)
-      .then(episodes => {
-        this.episodes = episodes;
+    this.guest.episodes.forEach(v => {
+      this.episodeService.getGuestsEpisode(v).then(res => {
+        this.episodes[this.episodes.length] = res;
+        this.ref.detectChanges();
       });
-      const title = 'ゲスト紹介 | ' + name + ' | しがないラジオ';
-      const url = document.location.origin + document.location.pathname;
-      this.titleService.setTitle(title);
-      this.metaService.updateTag({property: 'og:title', content: title});
-      this.metaService.updateTag({property: 'og:url', content: url});
-      this.metaService.updateTag({property: 'og:description', content: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト'});
+    });
+    const title = 'ゲスト紹介 | ' + name + ' | しがないラジオ';
+    const url = document.location.origin + document.location.pathname;
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({property: 'og:title', content: title});
+    this.metaService.updateTag({property: 'og:url', content: url});
+    this.metaService.updateTag({property: 'og:description', content: 'SIerのSEからWeb系エンジニアに転職した2人がお届けするポッドキャスト'});
   }
 
   gotoDetail(episode: Episode): void {

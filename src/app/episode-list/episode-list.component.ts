@@ -60,7 +60,7 @@ export class EpisodeListComponent implements OnInit {
     this.loading = true;
     this
       .episodeService
-      .getEpisodes(pageNumber * 20)
+      .getEpisodes('arr', pageNumber * 20)
       .then(episodes => {
         this.episodes = episodes;
         this.loading = false;
