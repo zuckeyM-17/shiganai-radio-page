@@ -37,7 +37,6 @@ export class EpisodeListComponent implements OnInit {
   ngOnInit() {
     this.getEpisodes(this.currentPageNum);
     this.userService.getUserData().then(user => {
-      console.log(Math.round(user.trackCount / 20));
       this.pages = new Array(Math.round(user.trackCount / 20));
     });
     const title = 'しがないラジオ';
