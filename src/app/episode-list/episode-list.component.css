@@ -61,18 +61,6 @@ a {
 .pagination {
     text-align: center;
 }
-.selectedPage {
-  margin: 0px 6px;
-  padding: 2px 5px 2px 5px;
-  background-color: #e58a31;
-  color: #ffffff;
-  font-size: .16rem;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  box-shadow: 1px 1px 5px 1px #cccccc;
-  text-align: center;
-}
 
 .page {
   margin: 0px 6px;
@@ -85,4 +73,9 @@ a {
   outline: none;
   box-shadow: 1px 1px 5px 1px #cccccc;
   text-align: center;
+}
+
+.page.selected-page {
+  background-color: #e58a31;
+  color: #ffffff;
 }
