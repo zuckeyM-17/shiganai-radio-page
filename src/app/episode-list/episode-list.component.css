@@ -69,13 +69,12 @@ a {
   height: 30px;
   line-height: 30px;
   margin: 0px 6px;
-  background-color: #FAF3DD;
-  color: #283044;
-  font-size: .16rem;
-  border: none;
+  background-color: #faf9f5;
+  border: 1px solid #cccccc;
   border-radius: 3px;
-  outline: none;
-  box-shadow: 1px 1px 5px 1px #cccccc;
+  box-shadow: -1px -1px 5px #eeeeee inset;
+  font-size: .16rem;
+  color: #283044;
   text-align: center;
   cursor: pointer;
 }
@@ -87,4 +86,5 @@ a {
 .page.selected {
   background-color: #e58a31;
   color: #ffffff;
+  box-shadow: none;
 }
