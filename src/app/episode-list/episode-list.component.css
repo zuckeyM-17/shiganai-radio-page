@@ -58,13 +58,17 @@ a {
     line-height: .20rem;
     margin: 10px 0 0 0;
 }
-.pagination {
-    text-align: center;
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
 }
 
 .page {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   margin: 0px 6px;
-  padding: 2px 5px 2px 5px;
   background-color: #FAF3DD;
   color: #283044;
   font-size: .16rem;
@@ -73,6 +77,11 @@ a {
   outline: none;
   box-shadow: 1px 1px 5px 1px #cccccc;
   text-align: center;
+  cursor: pointer;
+}
+
+.page.neighbor {
+    width: 80px;
 }
 
 .page.selected {
