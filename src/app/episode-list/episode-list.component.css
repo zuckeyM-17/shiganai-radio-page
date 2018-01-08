@@ -1,67 +1,67 @@
 .loading {
-    font-size: .12rem;
-    text-align: center;
-    margin: 3em 0 3em 0;
-    color: #283044;
+  font-size: .12rem;
+  text-align: center;
+  margin: 3em 0 3em 0;
+  color: #283044;
 }
 .list_item {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0 30px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 30px 0;
 }
 .play {
-    margin: 0 5px auto 0;
+  margin: 0 5px auto 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .ep_summary {
-    position: relative;
-    flex: 1;
-    background-color: #FAF3DD;
-    color: #283044;
-    border-radius: 0.25em;
-    padding: 27px 27px 27px 27px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 0.5px solid #eeeeee;
-    box-shadow: 2px 2px 1px 1px #eeeeee;
+  position: relative;
+  flex: 1;
+  background-color: #FAF3DD;
+  color: #283044;
+  border-radius: 0.25em;
+  padding: 27px 27px 27px 27px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0.5px solid #eeeeee;
+  box-shadow: 2px 2px 1px 1px #eeeeee;
 }
 .ep_summary:hover {
-    color: #bbbbbb;
+  color: #bbbbbb;
 }
 .ep_pub_date {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    padding: 0.5em;
-    width: 90px;
-    text-align: center;
-    background-color: #283044;
-    color: #FFFFFF;
-    font-size: .09rem;
-    border-radius: 10px 0 0 0;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  padding: 0.5em;
+  width: 90px;
+  text-align: center;
+  background-color: #283044;
+  color: #FFFFFF;
+  font-size: .09rem;
+  border-radius: 10px 0 0 0;
 }
 .ep_summary_title {
-    font-size: .24rem;
-    padding: 5px 5px 5px 5px;
-    border-bottom: medium solid #bbbbbb;
+  font-size: .24rem;
+  padding: 5px 5px 5px 5px;
+  border-bottom: medium solid #bbbbbb;
 }
 .ep_summary_content {
-    font-size: .12rem;
-    line-height: .20rem;
-    margin: 10px 0 0 0;
+  font-size: .12rem;
+  line-height: .20rem;
+  margin: 10px 0 0 0;
 }
 
 .pagination-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .page {
@@ -86,7 +86,7 @@ a {
 }
 
 .page.neighbor {
-    width: 80px;
+  width: 80px;
 }
 
 .page.selected {
