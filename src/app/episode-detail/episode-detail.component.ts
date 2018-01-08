@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
 import SC from 'soundcloud';
@@ -18,6 +18,7 @@ export class EpisodeDetailComponent implements OnInit {
   loading: boolean;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private episodeService: EpisodeService,
     private titleService: Title,
     private metaService: Meta,
@@ -34,22 +35,6 @@ export class EpisodeDetailComponent implements OnInit {
       const id = params['id'];
       this.getEpisode(id);
     });
-
-    // tweetボタンをactiveに
-    if (window['twttr']) {
-      window['twttr'].widgets.load();
-    }
-    const result = !function(d, s, id) {
-      let js;
-      const fjs = d.getElementsByTagName(s)[0],
-      p = /^http:/.test(d.location.toString()) ? 'http' : 'https';
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + '://platform.twitter.com/widgets.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }
-    } (document, 'script', 'twitter-wjs');
   }
 
   getEpisode(id: string): void {
@@ -82,5 +67,12 @@ export class EpisodeDetailComponent implements OnInit {
         this.ref.detectChanges();
       });
   }
-
+  twButtonClicked(): void {
+    let twUrl = 'https://twitter.com/intent/tweet';
+    twUrl += '?hashtags=' + encodeURIComponent('しがないラジオ');
+    twUrl += '&related=' + encodeURIComponent('shiganaiRadio');
+    twUrl += '&url=' + encodeURIComponent('https://shiganai.org' + this.router.url);
+    twUrl += '&text=' + encodeURIComponent(`"${this.episode.title}"\n`);
+    window.open(twUrl, 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1');
+  }
 }
