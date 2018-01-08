@@ -5,7 +5,6 @@ import axios from 'axios';
 import { UserService } from './user.service';
 
 import { Episode } from './episode';
-import { EpisodeList } from 'app/episode-list';
 
 const emptyEpisode = {
   id: '',
