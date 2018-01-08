@@ -11,7 +11,7 @@ export class UserService {
   getUserData(): Promise<User> {
     SC.initialize({
       client_id: 'nviGqqUJ1aoaFVSMA7EdLE3IZJLwYFKU',
-      redirect_uri: 'http://example.com/callback'
+      redirect_uri: 'https://shiganai.org'
     });
     return SC.get('/users/294673416')
       .then(res => {
