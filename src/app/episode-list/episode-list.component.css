@@ -78,6 +78,12 @@ a {
   text-align: center;
   cursor: pointer;
 }
+.page:hover {
+  background-color: #fcfcfc;
+}
+.page:active {
+  background-color: #eaeaea;
+}
 
 .page.neighbor {
     width: 80px;
@@ -87,4 +93,10 @@ a {
   background-color: #e58a31;
   color: #ffffff;
   box-shadow: none;
+}
+.page.selected:hover {
+  background-color: #e49343;
+}
+.page.selected:active {
+  background-color: #ce7e2e;
 }
