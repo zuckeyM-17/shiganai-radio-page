@@ -4,6 +4,8 @@ import { Title, Meta } from '@angular/platform-browser';
 
 import { EpisodeService } from '../episode.service';
 import { Episode } from '../episode';
+import { UserService } from '../user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-episode-list',
@@ -12,23 +14,31 @@ import { Episode } from '../episode';
 })
 export class EpisodeListComponent implements OnInit {
   episodes: Episode[];
-  display_all: boolean;
   loading: boolean;
   saved_sc_top: number;
   auto_scrolling: boolean;
+  trackCount: number;
+  currentPageNum: number;
+  pages: Array<number>;
 
   constructor(
+    private userService: UserService,
     private episodeService: EpisodeService,
     private router: Router,
     private titleService: Title,
     private metaService: Meta,
     ) {
-      this.display_all = false;
       this.loading = true;
+      this.trackCount = 0;
+      this.currentPageNum = 0;
+      this.pages = new Array(0);
     }
 
   ngOnInit() {
-    this.getEpisodes(10);
+    this.getEpisodes(this.currentPageNum);
+    this.userService.getUserData().then(user => {
+      this.pages = new Array(Math.round(user.trackCount / 20));
+    });
     const title = 'しがないラジオ';
     const url = document.location.origin + document.location.pathname;
     this.titleService.setTitle(title);
@@ -45,22 +55,18 @@ export class EpisodeListComponent implements OnInit {
     }
   }
 
-  getEpisodes(limit = 0) {
+  getEpisodes(pageNumber: number) {
+    this.loading = true;
     this
       .episodeService
-      .getEpisodes()
+      .getEpisodes('arr', pageNumber * 20)
       .then(episodes => {
-        if (limit === 0) {
-          this.episodes = episodes;
-          this.display_all = true;
-        } else {
-          this.episodes = episodes.slice(0, limit);
-          this.display_all = false;
-        }
+        this.episodes = episodes;
         this.loading = false;
         // スクロール問題を泥臭く解消
         this.saved_sc_top = document.body.scrollTop;
         this.auto_scrolling = true;
+        this.currentPageNum = pageNumber;
       });
   }
 
