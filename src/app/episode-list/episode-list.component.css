@@ -75,7 +75,7 @@ a {
   text-align: center;
 }
 
-.page.selected-page {
+.page.selected {
   background-color: #e58a31;
   color: #ffffff;
 }

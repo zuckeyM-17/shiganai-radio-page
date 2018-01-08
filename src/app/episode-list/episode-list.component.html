@@ -30,7 +30,7 @@
       </span>
       <span
         class="page"
-        [class.selected-page]="i === currentPageNum"
+        [class.selected]="i === currentPageNum"
         *ngFor="let page of pages;let i = index;"
         (click)="(i === currentPageNum) ? null : getEpisodes(i)"
       >
