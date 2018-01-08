@@ -1,6 +1,6 @@
 <ul class="list">
-  <li>
-    <p *ngIf="this.loading" class="loading">
+  <li *ngIf="this.loading">
+    <p class="loading">
       LOADING... Please Wait.
     </p>
   </li>
@@ -19,7 +19,7 @@
       </div>
     </a>
   </li>
-  <li class="pagination">
+  <li *ngIf="!this.loading" class="pagination">
     <div class="pagination-container">
       <div
         class="page neighbor"
